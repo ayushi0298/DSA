@@ -1,5 +1,14 @@
 import java.util.*;
+//https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
+/*
+Algorithm:
+1)initialize visited with false and distance with MAX value and in priority queue add (source,source distance) initially.
+2)while pq is not empty
+ a)find min in pq at every iteration
+ b) if we find min then update its distance with current distance and weight
+ */
 
+//O(ElogV)
 public class DijkstraAlgorithmGraphs {
     ArrayList<ArrayList<Pair>> graph;
     boolean visited[];
@@ -7,7 +16,7 @@ public class DijkstraAlgorithmGraphs {
     int vertices;
     static PriorityQueue<Pair> pq = new PriorityQueue<>();
 
-    public static class Pair implements Comparable<Pair>{
+    public static class Pair implements Comparable<Pair> {
         int value1;
         int value2;
 
@@ -19,7 +28,7 @@ public class DijkstraAlgorithmGraphs {
         @Override
         public int compareTo(Pair o) {
             // min
-             return Integer.compare(value2,o.value2);
+            return Integer.compare(value2, o.value2);
             // max
 //             return Integer.compare(o.value2,value2);
         }
@@ -33,6 +42,7 @@ public class DijkstraAlgorithmGraphs {
         }
     }
 
+    //for adjacency list representation
     public void graphCreation(int vertices) {
         this.vertices = vertices;
         graph = new ArrayList<>();
@@ -42,10 +52,10 @@ public class DijkstraAlgorithmGraphs {
     }
 
     public void addEdge(int source, int destination, int weight) {
-//        pairs= new ArrayList<>(vertices);
-//        Edge edge = new Edge(source, destination, weight);
-//        pairs.add(edge);
-          graph.get(source).add(new Pair(destination,weight));
+       /* pairs= new ArrayList<>(vertices);
+          Edge edge = new Edge(source, destination, weight);
+          pairs.add(edge);*/
+        graph.get(source).add(new Pair(destination, weight));
     }
 
     public void dijkstra(int source) {
@@ -71,7 +81,7 @@ public class DijkstraAlgorithmGraphs {
                         int newWeight = distance[vertex] + adjacentNode.value2;
                         int current = distance[verticeNumber];
                         if (current > newWeight) {
-                            Pair p = new Pair(verticeNumber,newWeight);
+                            Pair p = new Pair(verticeNumber, newWeight);
                             pq.add(p);
                             distance[verticeNumber] = newWeight;
                         }
@@ -79,9 +89,9 @@ public class DijkstraAlgorithmGraphs {
                 }
             }
         }
-
         System.out.println(Arrays.toString(distance));
     }
+
     public void printGraph() {
         for (int i = 0; i < graph.size(); i++) {
             System.out.println(Arrays.toString(new ArrayList[]{graph.get(i)}));

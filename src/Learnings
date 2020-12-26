@@ -1,0 +1,10 @@
+#HashMap and TreeMap:
+HashMAp:
+1) O(1) for lookup and insertion
+2) A HashMap contains values based on the key.
+3) contains unique elements,it may have one null key and multiple null values,It maintains no order.
+
+TreeMap:
+1) O(logn) for lookup and insertion
+2) It contains only unique elements,It cannot have null key but can have multiple null values.
+3) It is same as HashMap instead maintains ascending order.
