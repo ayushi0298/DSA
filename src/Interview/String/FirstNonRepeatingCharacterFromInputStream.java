@@ -76,6 +76,7 @@ public class FirstNonRepeatingCharacterFromInputStream {
         for (int i = 0; i < storeCountAndFirstOccurence.length; i++) {
             if (storeCountAndFirstOccurence[i] != null && storeCountAndFirstOccurence[i].value1 == 1 && min > storeCountAndFirstOccurence[i].value2) {
                 min = storeCountAndFirstOccurence[i].value2;
+                //System.out.println(min);
                 c = (char) ('a' + min);
             }
         }

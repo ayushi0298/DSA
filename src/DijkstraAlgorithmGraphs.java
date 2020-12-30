@@ -57,7 +57,7 @@ public class DijkstraAlgorithmGraphs {
           pairs.add(edge);*/
         graph.get(source).add(new Pair(destination, weight));
     }
-
+    //api for dijkstra algorithm.
     public void dijkstra(int source) {
         distance = new int[vertices];
         visited = new boolean[vertices];
