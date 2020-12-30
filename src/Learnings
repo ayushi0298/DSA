@@ -8,3 +8,8 @@ TreeMap:
 1) O(logn) for lookup and insertion
 2) It contains only unique elements,It cannot have null key but can have multiple null values.
 3) It is same as HashMap instead maintains ascending order.
+
+#Difference between string and a stream:
+--> we can traverse string a lot of times to get output but stream can be traversed only once.
+
+
