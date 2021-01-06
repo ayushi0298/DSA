@@ -14,7 +14,7 @@ public class MaximumIntervalsOverlap {
         @Override
         public int compareTo(Pair o) {
             // min
-            if(value1 == o.value1){
+            if (value1 == o.value1) {
                 return Integer.compare(o.value2, value2);
             }
             return Integer.compare(value1, o.value1);
@@ -30,7 +30,9 @@ public class MaximumIntervalsOverlap {
                     '}';
         }
     }
-    int maxGuests = 0, max=0;
+
+    int maxGuests = 0, max = 0;
+
     public int findMaxTime(int x[], int y[], int size) {
 
 //        Arrays.sort(x);
@@ -60,7 +62,7 @@ public class MaximumIntervalsOverlap {
                 maxGuests = maxGuests - 1;
             }
             //System.out.println(result[i].value1 +" " + maxGuests);
-            if(max<maxGuests){
+            if (max < maxGuests) {
                 max = maxGuests;
             }
         }
