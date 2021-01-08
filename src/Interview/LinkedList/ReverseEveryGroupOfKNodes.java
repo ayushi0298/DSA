@@ -1,8 +1,8 @@
 package Interview.LinkedList;
 
-import java.util.ArrayList;
-
-public class ReverseALinkedList {
+;
+//https://www.geeksforgeeks.org/reverse-a-list-in-groups-of-given-size/
+public class ReverseEveryGroupOfKNodes {
     static Node head;
 
     static class Node {
@@ -17,34 +17,32 @@ public class ReverseALinkedList {
 
     public Node createList() {
         Node a = new Node(2);
-        Node b = new Node(3);
-        Node c = new Node(4);
-        Node d = new Node(5);
-        Node e = new Node(6);
+        Node b = new Node(4);
+        Node c = new Node(5);
+        Node d = new Node(6);
         head = a;
         a.next = b;
         b.next = c;
         c.next = d;
-        d.next = e;
-        e.next = null;
+        d.next = null;
         return head;
-
     }
 
-    public Node reverseLL(Node head) {
-
+    public Node reverseLL(Node head, int k) {
+        int count = 0;
         Node prev = null;
-        Node next;
+        Node next=null;
         Node current = head;
-        while (current != null ) {
+        while (current != null && count < k) {
             next = current.next;
             current.next = prev;
             prev = current;
             current = next;
-
+            count++;
         }
-        head = prev;
-        return head;
+        if (next != null)
+            head.next = reverseLL(current, k);
+            return prev;
     }
 
     public void printList(Node head) {
@@ -53,14 +51,17 @@ public class ReverseALinkedList {
             head = head.next;
         }
     }
+
     public static void main(String args[]) {
-        ReverseALinkedList rl = new ReverseALinkedList();
-        head = rl.createList();
+        ReverseEveryGroupOfKNodes rk = new ReverseEveryGroupOfKNodes();
+        int k = 2;
+        head = rk.createList();
         //rl.printList(head);
         //System.out.println(" ");
         //System.out.println("After: ");
-        Node result = rl.reverseLL(head);
-        rl.printList(result);
+        Node result = rk.reverseLL(head, k);
+        rk.printList(result);
 
     }
+
 }
