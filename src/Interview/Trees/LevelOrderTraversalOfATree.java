@@ -37,7 +37,7 @@ public class LevelOrderTraversalOfATree {
         }
 
     }
-  /* //using Pair class
+   //using Pair class
    public void printLevelOrder(TreeNode root) {
 
         Queue<Pair> storeValues = new LinkedList<>();
@@ -55,7 +55,7 @@ public class LevelOrderTraversalOfATree {
 
         }
 
-    }*/
+    }
     //using 2 queues
     public void printlevelusingqueue(TreeNode root){
         Queue<TreeNode> q1= new LinkedList<>();
@@ -90,11 +90,30 @@ public class LevelOrderTraversalOfATree {
         }
 
     }
+    public void printLevelUsingOneQueue(TreeNode root){
+        Queue<TreeNode> q1 = new LinkedList<>();
+        q1.add(root);
+        while (true){
+            int nodeCount = q1.size();
+            while (nodeCount>0){
+                TreeNode temp = q1.peek();
+                System.out.print(temp.val + " ");
+                q1.remove();
+                if(temp.left != null){
+                    q1.add(temp.left);
+                }
+                if(temp.right != null){
+                    q1.add(temp.right);
+                }
+                nodeCount--;
+            }
+        }
+    }
     public static void main(String args[]) {
 
         LevelOrderTraversalOfATree lo = new LevelOrderTraversalOfATree();
         root = lo.createTree();
-        lo.printlevelusingqueue(root);
+        lo.printLevelUsingOneQueue(root);
         //lo.printLevelOrder(root);
 
     }
