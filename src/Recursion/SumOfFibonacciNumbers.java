@@ -39,4 +39,3 @@ public class SumOfFibonacciNumbers {
 
 
 
-/*1,1,3,5*/
