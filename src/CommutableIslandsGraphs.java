@@ -1,22 +1,19 @@
-
-
-import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 import java.util.Collections;
-//https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/
-public class MSTKruskal {
+
+public class CommutableIslandsGraphs {
     ArrayList<Integer> parent;
     ArrayList<Edge> edgesArraylist;
     int vertices, edges;
-    //constructor for 2 arraylists. one for filling parent and second for arraylist which is storing edges
-    public MSTKruskal(int n) {
+
+    public CommutableIslandsGraphs(int n) {
         edgesArraylist = new ArrayList<>();
         parent = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             parent.add(i);
         }
     }
-    //This class is for making edges as they contains source node, destination and wight of that edge.
+
     public static class Edge implements Comparable<Edge> {
 
         int source;
@@ -30,14 +27,13 @@ public class MSTKruskal {
             this.weight = weight;
         }
 
-        public int compareTo(Edge compareEdge)
-        {
+        public int compareTo(Edge compareEdge) {
             return this.weight - compareEdge.weight;
         }
     }
 
     public void addEdge(int source, int destination, int weight) {
-        Edge edge = new Edge(source,destination,weight);
+        Edge edge = new Edge(source, destination, weight);
         edgesArraylist.add(edge);
     }
 
@@ -56,54 +52,56 @@ public class MSTKruskal {
             return result;
         }
     }
+
     //This function is for checking the sets of the nodes passed in the argument
     void union(int value1, int value2) {
         int value1Parent = find(value1);
         int value2Parent = find(value2);
         parent.set(value1Parent, value2Parent);
     }
+
     //to print the graph
     public void printGraph(ArrayList<Edge> input) {
         for (int i = 0; i < input.size(); i++) {
-            Edge edge = input.get(i);
-            System.out.println("Edge: " + i + " "+ "source: " + edge.source + " " + "destination: " + edge.destination +  " " +"weight: " + edge.weight);
+          Edge edge = input.get(i);
+            System.out.println("Edge: " + i + " " + "source: " + edge.source + " " + "destination: " + edge.destination + " " + "weight: " + edge.weight);
         }
     }
+
     //main kruskal algorithm to find minimum edge and add it into the resultant arraylist.
     public int kruskal() {
         ArrayList<Edge> result = new ArrayList<>();
-        int sum=0;
+        int sum = 0;
         Collections.sort(edgesArraylist);
-       printGraph(edgesArraylist);
 
         for (int j = 0; j < edgesArraylist.size(); j++) {
             Edge curEdge = edgesArraylist.get(j);
             int rootOfSource = find(curEdge.source);
             int rootOfDestination = find(curEdge.destination);
-            System.out.println(rootOfSource + " " + rootOfDestination);
-            //This is to add only those edges whose sets are not same. we will ignore edges whose connecting nodes belongs to same sets.
-            if(rootOfSource != rootOfDestination){
+            //System.out.println(rootOfSource + " " + rootOfDestination);
+            if (rootOfSource != rootOfDestination) {
                 result.add(curEdge);
                 parent.set(rootOfSource, rootOfDestination);
                 sum = sum + curEdge.weight;
             }
         }
-        printGraph(result);
+        //printGraph(result);
         return sum;
     }
+
     //main function
     public static void main(String args[]) {
         int n = 5;
-        MSTKruskal mst = new MSTKruskal(n);
+        CommutableIslandsGraphs cd = new CommutableIslandsGraphs(n);
        /* mst.addEdge(1,2,9);
         mst.addEdge(2,3,15);
         mst.addEdge(1,3,18);*/
-        mst.addEdge(1,2,1);
-        mst.addEdge(2,3,4);
-        mst.addEdge(3,4,2);
-        mst.addEdge(1,4,3);
-        mst.addEdge(1,3,10);
+        cd.addEdge(1, 2, 1);
+        cd.addEdge(2, 3, 4);
+        cd.addEdge(3, 4, 2);
+        cd.addEdge(1, 4, 3);
+        cd.addEdge(1, 3, 10);
 
-        System.out.println(mst.kruskal());
+        System.out.println(cd.kruskal());
     }
 }

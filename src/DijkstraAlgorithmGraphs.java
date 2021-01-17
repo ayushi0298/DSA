@@ -102,11 +102,11 @@ public class DijkstraAlgorithmGraphs {
     public static void main(String args[]) {
         DijkstraAlgorithmGraphs da = new DijkstraAlgorithmGraphs();
         da.graphCreation(4);
-        da.addEdge(0, 1, 10);
-        da.addEdge(0, 2, 40);
-        da.addEdge(1, 2, 20);
-        da.addEdge(2, 3, 30);
-        da.addEdge(1, 3, 10);
+        da.addEdge(0, 1, 1);
+        da.addEdge(0, 3, 3);
+        da.addEdge(0, 2, 10);
+        da.addEdge(2, 3, 2);
+        da.addEdge(1, 2, 4);
         da.printGraph();
         da.dijkstra(0);
 
