@@ -28,7 +28,7 @@ public class TwoStringsAreAnagrams {
     public static void main(String args[]) {
         TwoStringsAreAnagrams ts = new TwoStringsAreAnagrams();
         String s1 = "abc";
-        String s2 = "cataa";
+        String s2 = "catt";
         String s3 = "tac";
         System.out.println(ts.checkAnagrams(s2, s3));
 

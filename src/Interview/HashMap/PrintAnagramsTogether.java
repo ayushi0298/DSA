@@ -34,7 +34,7 @@ public class PrintAnagramsTogether {
 
     public static void main(String args[]) {
         PrintAnagramsTogether pa=new PrintAnagramsTogether();
-        String input[] = {"cat", "tac","dog", "god","ased","desa","akash","kasha"};
+        String input[] = {"cat", "tac","dog", "god","ased","desa","akash","kasha","abcd","dcba","cdba","bacd"};
         pa.printAnagrams(input);
 
 

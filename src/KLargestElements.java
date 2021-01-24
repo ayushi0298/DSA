@@ -20,13 +20,20 @@ public class KLargestElements {
     public static void main(String args[]){
         KLargestElements kl =new KLargestElements();
         ArrayList<Integer> input = new ArrayList<>();
-        int k=4;
+        int k=10;
         input.add(1);
         input.add(1);
         input.add(3);
         input.add(9);
         input.add(50);
         input.add(10);
+        input.add(98);
+        input.add(32);
+        input.add(88);
+        input.add(12);
+        input.add(0);
+        input.add(54);
+        input.add(65);
         System.out.println(kl.findKLargest(input,k));
     }
 }
