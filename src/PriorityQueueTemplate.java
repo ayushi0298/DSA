@@ -7,10 +7,9 @@ public class PriorityQueueTemplate {
 
     public void pqq(ArrayList<Integer> input) {
         //default integer priority queue
-        //PriorityQueue<Integer> queue = new PriorityQueue<>();
-
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
         //reverse integer priority queue
-        PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
+        //PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
         for (int i = 0; i < input.size(); i++) {
             queue.add(input.get(i));
         }

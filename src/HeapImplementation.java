@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class HeapImplementation {
-    /* package codechef; // don't place package name! */
-
-    /* Name of the class has to be "Main" only if the class is public. */
 
     ArrayList<Integer> input = new ArrayList<>();
 

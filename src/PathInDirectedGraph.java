@@ -50,16 +50,6 @@ public class PathInDirectedGraph {
 
     public static void main(String args[]) {
         PathInDirectedGraph pd = new PathInDirectedGraph();
-        /*pd.addEdges(1, 2);
-        pd.addEdges(2, 3);
-        pd.addEdges(3, 4);
-        pd.addEdges(4, 5);*/
-        /*pd.addEdges(1, 2);
-        pd.addEdges(4, 1);
-        pd.addEdges(2,4);
-        pd.addEdges(3, 4);
-        pd.addEdges(5, 2);
-        pd.addEdges(1, 3);*/
         ArrayList<ArrayList<Integer>> input = new ArrayList<>();
         input.add(new ArrayList<>(Arrays.asList(1, 2)));
         System.out.println(pd.solve(2, input));
