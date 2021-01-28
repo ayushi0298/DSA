@@ -1,3 +1,5 @@
+package CollectionFramework.Trees;
+
 //https://www.interviewbit.com/problems/remove-half-nodes/
 public class RemoveHalfNodesTree {
     static TreeNode root;

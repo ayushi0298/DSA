@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+package CollectionFramework.Graphs;
+
 import java.util.List;
 //https://www.interviewbit.com/problems/valid-path/
 public class ValidPathDFS {
@@ -75,7 +75,7 @@ public class ValidPathDFS {
 
     }
 //    public String solve(int rows, int columns, int circles, int radius, ArrayList<Integer> E, ArrayList<Integer> F) {
-//        ValidPathDFS vd = new ValidPathDFS();
+//        CollectionFramework.Graphs.ValidPathDFS vd = new CollectionFramework.Graphs.ValidPathDFS();
 //        vd.markCoordinates(circles, rows, columns, radius, convertIntegers(E), convertIntegers(F));
 //        return callingDFS(rows, columns);
 //    }

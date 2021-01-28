@@ -1,6 +1,5 @@
+package CollectionFramework.Trees;
 
-
-import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 import java.util.Collections;
 //https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/

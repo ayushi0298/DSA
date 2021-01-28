@@ -1,5 +1,4 @@
-import Interview.Trees.LevelOrderTraversalInSpriralForm;
-import Interview.Trees.LevelOrderTraversalOfATree;
+package CollectionFramework.Trees;
 
 import java.util.*;
 //https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/

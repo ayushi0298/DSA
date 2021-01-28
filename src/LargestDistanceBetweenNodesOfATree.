@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 //https://www.interviewbit.com/problems/largest-distance-between-nodes-of-a-tree/
-public class LargestDistanceBetweenNodesOfATree {
+public class CollectionFramework.Graphs.LargestDistanceBetweenNodesOfATree {
     ArrayList<ArrayList<Integer>> graph;
     HashMap<Integer, Integer> storeMaxDistance = new HashMap<>();
     int vertices, current;
@@ -55,7 +55,7 @@ public class LargestDistanceBetweenNodesOfATree {
         return Collections.max(storeMaxDistance.values());
     }
     public static void main(String args[]) {
-        LargestDistanceBetweenNodesOfATree graph = new LargestDistanceBetweenNodesOfATree();
+        CollectionFramework.Graphs.LargestDistanceBetweenNodesOfATree graph = new CollectionFramework.Graphs.LargestDistanceBetweenNodesOfATree();
         ArrayList<Integer> passingArrayList = new ArrayList<>();
         passingArrayList.add(-1);
         passingArrayList.add(0);

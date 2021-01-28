@@ -1,9 +1,12 @@
 package Interview.Trees;
+
 import java.util.LinkedList;
 import java.util.Queue;
+
 //https://www.geeksforgeeks.org/level-order-tree-traversal/
 public class LevelOrderTraversalOfATree {
     static TreeNode root;
+
     public class TreeNode {
         int val;
         TreeNode right;
@@ -28,37 +31,41 @@ public class LevelOrderTraversalOfATree {
         b.right = e;
         return root;
     }
-    public class Pair{
+
+    public class Pair {
         TreeNode node;
         int level;
-         Pair(TreeNode node, int level){
-           this.node = node;
-           this.level = level;
+
+        Pair(TreeNode node, int level) {
+            this.node = node;
+            this.level = level;
         }
 
     }
-   //using Pair class// it was written by me
-   public void printLevelOrder(TreeNode root) {
+
+    //using Pair class it was written by me
+    public void printLevelOrder(TreeNode root) {
 
         Queue<Pair> storeValues = new LinkedList<>();
-        storeValues.add(new Pair(root,1));
+        storeValues.add(new Pair(root, 1));
         while (!storeValues.isEmpty()) {
-         Pair temp = storeValues.peek();
-         storeValues.remove();
+            Pair temp = storeValues.peek();
+            storeValues.remove();
             System.out.println(temp.node.val + " " + temp.level);
             if (temp.node.left != null) {
-                storeValues.add(new Pair(temp.node.left, temp.level+1));
+                storeValues.add(new Pair(temp.node.left, temp.level + 1));
             }
             if (temp.node.right != null) {
-                storeValues.add(new Pair(temp.node.right , temp.level+1));
+                storeValues.add(new Pair(temp.node.right, temp.level + 1));
             }
 
         }
 
     }
+
     //using 2 queues
-    public void printlevelusingqueue(TreeNode root){
-        Queue<TreeNode> q1= new LinkedList<>();
+    public void printlevelusingqueue(TreeNode root) {
+        Queue<TreeNode> q1 = new LinkedList<>();
         Queue<TreeNode> q2 = new LinkedList<>();
         if (root == null)
             return;
@@ -90,30 +97,33 @@ public class LevelOrderTraversalOfATree {
         }
 
     }
-    public void printLevelUsingOneQueue(TreeNode root){
+
+    public void printLevelUsingOneQueue(TreeNode root) {
         Queue<TreeNode> q1 = new LinkedList<>();
         q1.add(root);
-        while (true){
+        while (true) {
             int nodeCount = q1.size();
-            while (nodeCount>0){
+            while (nodeCount > 0) {
                 TreeNode temp = q1.peek();
                 System.out.print(temp.val + " ");
                 q1.remove();
-                if(temp.left != null){
+                if (temp.left != null) {
                     q1.add(temp.left);
                 }
-                if(temp.right != null){
+                if (temp.right != null) {
                     q1.add(temp.right);
                 }
                 nodeCount--;
             }
         }
     }
+
+
     public static void main(String args[]) {
 
         LevelOrderTraversalOfATree lo = new LevelOrderTraversalOfATree();
         root = lo.createTree();
-        lo.printLevelUsingOneQueue(root);
+        lo.printLevelOrder(root);
         //lo.printLevelOrder(root);
 
     }

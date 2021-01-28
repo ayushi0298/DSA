@@ -1,4 +1,4 @@
-//package com.company.graphs;
+package CollectionFramework.Graphs;//package com.company.graphs;
 
 import java.util.ArrayList;
 

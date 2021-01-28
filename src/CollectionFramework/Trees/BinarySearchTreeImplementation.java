@@ -1,3 +1,5 @@
+package CollectionFramework.Trees;
+
 public class BinarySearchTreeImplementation {
     public class TreeNode {
         int value;

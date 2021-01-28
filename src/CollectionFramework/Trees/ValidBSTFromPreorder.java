@@ -1,3 +1,5 @@
+package CollectionFramework.Trees;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Stack;
@@ -36,7 +38,7 @@ public class ValidBSTFromPreorder {
 //    }
 //
 //    public static void main(String args[]) {
-//        ValidBSTFromPreorder bst = new ValidBSTFromPreorder();
+//        CollectionFramework.Trees.ValidBSTFromPreorder bst = new CollectionFramework.Trees.ValidBSTFromPreorder();
 //        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(40, 30, 35, 20, 80, 100));
 //        int start = 0, end = input.size() - 1;
 ////        input.add(2);

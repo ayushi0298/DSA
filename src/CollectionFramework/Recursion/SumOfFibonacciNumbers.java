@@ -1,6 +1,5 @@
-package Recursion;
+package CollectionFramework.Recursion;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 //https://www.interviewbit.com/problems/sum-of-fibonacci-numbers/

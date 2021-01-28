@@ -1,3 +1,5 @@
+package CollectionFramework.Graphs;
+
 import java.util.*;
 //https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
 /*
