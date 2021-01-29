@@ -68,7 +68,7 @@ public class CousinsInBinaryTree {
         HashMap<Integer, Integer> storeRoot = new HashMap<>();
         HashMap<Integer, ArrayList<Integer>> storeCousins = new HashMap<>();
         storePair.add(new Pair(A, 0));
-        storeRoot.put(A.val, A.val);
+        storeRoot.put(A.val, -1);
         while (!storePair.isEmpty()) {
             Pair current = storePair.peek();
             storePair.remove();
@@ -86,12 +86,6 @@ public class CousinsInBinaryTree {
                 storePair.add(new Pair(current.node.right, current.level + 1));
             }
         }
-       /* for (Map.Entry x : storeCousins.entrySet()) {
-            int key = (int) x.getKey();
-            ArrayList<Integer> values = storeCousins.get(key);
-            System.out.print(key + " " + values);
-            System.out.println(" ");
-        }*/
 
         if (storeCousins.containsKey(levelOfB)) {
             //System.out.println(levelOfB);
