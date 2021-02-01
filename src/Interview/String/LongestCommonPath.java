@@ -24,7 +24,7 @@ public class LongestCommonPath {
         LongestCommonPath ld = new LongestCommonPath();
         ArrayList<String> input = new ArrayList<>();
         input.add("abcdes");
-        input.add("abcd");
+        input.add("abd");
         input.add("abc");
         System.out.println(ld.findCommonPath(input));
 
