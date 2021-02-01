@@ -1,5 +1,6 @@
 package CollectionFramework.Trees;
 
+//https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
 public class DiameterOfABinaryTree {
     static TreeNode root;
     static int maxDiameter = 0;
@@ -29,10 +30,7 @@ public class DiameterOfABinaryTree {
         b.left = d;
         b.right = e;
         c.right = f;
-
-
         return root;
-
     }
 
     public int findDiameter(TreeNode root, int distance) {
@@ -58,7 +56,6 @@ public class DiameterOfABinaryTree {
         if (root == null) {
             return 0;
         }
-
         leftPath = findDiameter(root.left);
         rightPath = findDiameter(root.right);
 
@@ -72,11 +69,11 @@ public class DiameterOfABinaryTree {
     public static void main(String args[]) {
         DiameterOfABinaryTree db = new DiameterOfABinaryTree();
         root = db.createTree();
-//        System.out.println(db.findDiameter(root, 0));
+//      System.out.println(db.findDiameter(root, 0));
         System.out.println(db.findDiameter(root));
         //db.findDiameter(root);
         System.out.println(maxDiameter);
 
     }
-
 }
+
