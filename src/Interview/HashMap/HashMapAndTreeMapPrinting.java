@@ -17,7 +17,7 @@ public class HashMapAndTreeMapPrinting {
             int key = (int) x.getKey();
             System.out.print(key + " ");
         }
-        System.out.println( " ");
+        System.out.println(" ");
 
     }
 

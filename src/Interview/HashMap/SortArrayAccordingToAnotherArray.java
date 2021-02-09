@@ -2,6 +2,13 @@ package Interview.HashMap;//https://www.geeksforgeeks.org/sort-array-according-o
 
 import java.util.*;
 
+//https://www.geeksforgeeks.org/sort-array-according-order-defined-another-array/
+/*
+algo:
+-->store the elements of a2 and their count in hashmap
+--> print elements of a1 on basis of their count in hashmap and remove that element from hashmap.
+--> then print the remaining elements by converting it into treemap so that they will get printed in sorted order.
+*/
 public class SortArrayAccordingToAnotherArray {
     HashMap<Integer, Integer> storeCount = new HashMap<>();
 
@@ -32,10 +39,10 @@ public class SortArrayAccordingToAnotherArray {
     }
 
     public static void main(String args[]) {
-        SortArrayAccordingToAnotherArray st= new SortArrayAccordingToAnotherArray();
+        SortArrayAccordingToAnotherArray st = new SortArrayAccordingToAnotherArray();
         int A1[] = {2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8};
         int A2[] = {2, 1, 8, 3};
-        st.sortArray(A1,A2);
+        st.sortArray(A1, A2);
 
 
     }

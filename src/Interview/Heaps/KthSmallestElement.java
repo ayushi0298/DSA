@@ -35,7 +35,5 @@ public class KthSmallestElement {
         input.add(8);
         input.add(11);
         System.out.println(kt.findSmallest(k, input));
-
-
     }
 }

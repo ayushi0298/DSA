@@ -1,13 +1,14 @@
 package Interview.Arrays;
+
 //https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/
 public class MatrixSpiralForm {
     int rows = 4;
     int columns = 4;
 
-    public void printSpiralForm(int[][] input, int i, int j,int rows,int columns) {
-      if(i>=rows || j>=columns){
-          return;
-      }
+    public void printSpiralForm(int[][] input, int i, int j, int rows, int columns) {
+        if (i >= rows || j >= columns) {
+            return;
+        }
         for (int k = i; k < columns; k++) {
             System.out.println(input[i][k]);
         }
@@ -25,7 +26,7 @@ public class MatrixSpiralForm {
 
         rows = rows - 1;
         columns = columns - 1;
-        printSpiralForm(input, i + 1, j + 1,rows,columns);
+        printSpiralForm(input, i + 1, j + 1, rows, columns);
 
     }
 
@@ -36,7 +37,7 @@ public class MatrixSpiralForm {
                 {5, 6, 7, 8},
                 {9, 10, 11, 12},
                 {13, 14, 15, 16}};
-        ms.printSpiralForm(input, 0, 0, ms.rows,ms.columns);
+        ms.printSpiralForm(input, 0, 0, ms.rows, ms.columns);
 
 
     }

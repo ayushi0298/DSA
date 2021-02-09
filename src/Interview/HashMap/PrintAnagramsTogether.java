@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 //https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/
+/*algo:
+-->sort the string and make it as a key of hashmap and then if any other string matches the key then append that word
+in the value of that key.
+*/
 public class PrintAnagramsTogether {
     public String sortString(String s) {
         char[] c = s.toCharArray();
