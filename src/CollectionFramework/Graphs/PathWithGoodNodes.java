@@ -29,21 +29,17 @@ public class PathWithGoodNodes {
 
     public void findPaths(int source, ArrayList<Integer> input, int C, int count, boolean visited[]) {
         int current;
-        if (input.get(source-1) == 1) {
+        if (input.get(source - 1) == 1) {
             count++;
         }
-        //System.out.println(count);
         ArrayList<Integer> adjacentNodes = graph.get(source);
-        if (adjacentNodes.size()==1 && count <= C) {
+        if (adjacentNodes.size() == 1 && count <= C) {
             resultCount++;
         }
         for (int i = 0; i < adjacentNodes.size(); i++) {
             current = adjacentNodes.get(i);
             if (!visited[current]) {
                 visited[current] = true;
-                /*if (input.get(current) == 1) {
-                    count++;
-                }*/
                 findPaths(current, input, C, count, visited);
             }
         }
@@ -52,14 +48,10 @@ public class PathWithGoodNodes {
     public int solve(ArrayList<Integer> input, ArrayList<ArrayList<Integer>> listOfEdges, int C) {
         int count = 0;
         vertices = input.size();
-        //System.out.println(vertices);
         graphCreation(vertices + 1);
-        //System.out.println(listOfEdges.size());
         for (int i = 0; i < listOfEdges.size(); i++) {
             addEdges(listOfEdges.get(i).get(0), listOfEdges.get(i).get(1));
         }
-        //printGraph();
-
         boolean visited[] = new boolean[vertices + 1];
         int source = 1;
         for (int i = 1; i <= vertices; i++) {
