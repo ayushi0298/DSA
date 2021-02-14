@@ -15,6 +15,11 @@ public class PathInDirectedGraph {
             graph.add(new ArrayList<>());
         }
     }
+    public void printGraph() {
+        for (int i = 0; i < graph.size(); i++) {
+            System.out.println(Arrays.toString(new ArrayList[]{graph.get(i)}));
+        }
+    }
 
     public void addEdges(int x, int y) {
         graph.get(x).add(y);
@@ -35,6 +40,7 @@ public class PathInDirectedGraph {
     public int solve(int A, ArrayList<ArrayList<Integer>> B) {
         vertices = A;
         graphCreation(vertices + 1);
+        printGraph();
         for (int i = 0; i < B.size(); i++) {
             addEdges(B.get(i).get(0), B.get(i).get(1));
         }

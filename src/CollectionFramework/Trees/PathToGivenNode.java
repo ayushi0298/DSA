@@ -23,9 +23,13 @@ public class PathToGivenNode {
         TreeNode a = new TreeNode(1);
         TreeNode b = new TreeNode(2);
         TreeNode c = new TreeNode(3);
+        TreeNode d = new TreeNode(4);
+        TreeNode e = new TreeNode(5);
         root = a;
         root.left = b;
         root.right = c;
+        b.left = d;
+        b.right = e;
         return root;
 
     }
@@ -57,7 +61,7 @@ public class PathToGivenNode {
     public static void main(String args[]) {
         PathToGivenNode pg = new PathToGivenNode();
         root = pg.createTree1();
-        int B = 3;
+        int B = 5;
         System.out.println(pg.solve(root, B));
 
     }
