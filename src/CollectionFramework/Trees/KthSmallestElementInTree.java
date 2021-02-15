@@ -25,8 +25,8 @@ public class KthSmallestElementInTree {
         root = a;
         root.left = b;
         root.right = c;
-        b.left=d;
-        b.right=e;
+        b.left = d;
+        b.right = e;
         return root;
 
     }
