@@ -57,6 +57,7 @@ public class PathWithGoodNodes {
         for (int i = 1; i <= vertices; i++) {
             visited[i] = false;
         }
+        visited[source]= true;
         findPaths(source, input, C, count, visited);
         return resultCount;
     }
