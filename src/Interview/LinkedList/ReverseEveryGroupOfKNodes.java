@@ -1,6 +1,7 @@
 package Interview.LinkedList;
 
 ;
+
 //https://www.geeksforgeeks.org/reverse-a-list-in-groups-of-given-size/
 public class ReverseEveryGroupOfKNodes {
     static Node head;
@@ -31,7 +32,7 @@ public class ReverseEveryGroupOfKNodes {
     public Node reverseLL(Node head, int k) {
         int count = 0;
         Node prev = null;
-        Node next=null;
+        Node next = null;
         Node current = head;
         while (current != null && count < k) {
             next = current.next;
@@ -42,7 +43,7 @@ public class ReverseEveryGroupOfKNodes {
         }
         if (next != null)
             head.next = reverseLL(current, k);
-            return prev;
+        return prev;
     }
 
     public void printList(Node head) {
