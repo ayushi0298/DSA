@@ -38,6 +38,7 @@ public class NthFibnocci {
     }
 
     public HashMap<Integer, Long> hm = new HashMap<Integer, Long>();
+
     //using hashmap
     public Long getFibonacciNumberTopDown(int n) {
         if (hm.containsKey(n)) return hm.get(n);

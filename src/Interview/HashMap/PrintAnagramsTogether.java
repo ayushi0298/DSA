@@ -3,6 +3,7 @@ package Interview.HashMap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+
 //https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/
 /*algo:
 -->sort the string and make it as a key of hashmap and then if any other string matches the key then append that word
@@ -30,15 +31,15 @@ public class PrintAnagramsTogether {
         }
         for (String s : storeAnagrams.keySet()) {
             ArrayList<String> values = storeAnagrams.get(s);
-            if (values.size() >=1) {
+            if (values.size() >= 1) {
                 System.out.println(values);
             }
         }
     }
 
     public static void main(String args[]) {
-        PrintAnagramsTogether pa=new PrintAnagramsTogether();
-        String input[] = {"cat", "tac","dog", "god","ased","desa","akash","kasha","abcd","dcba","cdba","bacd"};
+        PrintAnagramsTogether pa = new PrintAnagramsTogether();
+        String input[] = {"cat", "tac", "dog", "god", "ased", "desa", "abcd", "dcba", "cdba", "bacd"};
         pa.printAnagrams(input);
 
 
