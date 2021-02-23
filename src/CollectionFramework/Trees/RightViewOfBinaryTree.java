@@ -1,6 +1,7 @@
 package CollectionFramework.Trees;
 
 import Interview.Trees.LevelOrderTraversalOfATree;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -17,6 +18,7 @@ public class RightViewOfBinaryTree {
             this.val = val;
         }
     }
+
     static TreeNode root;
 
     public TreeNode createTree() {
@@ -35,16 +37,16 @@ public class RightViewOfBinaryTree {
     }
 
 
-   // public ArrayList<Integer> printLevelOrder(TreeNode root)
-    public ArrayList<Integer> solve(TreeNode root){
+    // public ArrayList<Integer> printLevelOrder(TreeNode root)
+    public ArrayList<Integer> solve(TreeNode root) {
         Queue<TreeNode> storeValues = new LinkedList<>();
         ArrayList<Integer> result = new ArrayList<>();
         storeValues.add(root);
         while (!storeValues.isEmpty()) {
             int size = storeValues.size();
-            for (int i = 1; i <=size; i++) {
+            for (int i = 1; i <= size; i++) {
                 TreeNode temp = storeValues.poll();
-                if(i==size){
+                if (i == size) {
                     result.add(temp.val);
                 }
                 if (temp.left != null) {
