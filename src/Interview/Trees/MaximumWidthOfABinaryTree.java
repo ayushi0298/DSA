@@ -31,8 +31,8 @@ public class MaximumWidthOfABinaryTree {
         a.left = b;
         a.right = c;
         b.left = d;
-        b.right=e;
-        c.left=f;
+        b.right = e;
+        c.left = f;
         return root;
     }
 
