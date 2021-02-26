@@ -3,6 +3,7 @@ package CollectionFramework.Hashing;
 import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 import java.util.stream.Collectors;
+
 //https://www.interviewbit.com/problems/two-out-of-three/
 public class TwoOutOfThree {
     // public ArrayList<Integer> findCommon(ArrayList<Integer> a1, ArrayList<Integer> a2, ArrayList<Integer> a3)
@@ -44,9 +45,9 @@ public class TwoOutOfThree {
         }
         System.out.println(storeValues);
         for (Map.Entry x : storeValues.entrySet()) {
-            int value= (int)x.getValue();
+            int value = (int) x.getValue();
             int key = (int) x.getKey();
-            if(value>=2){
+            if (value >= 2) {
                 result.add(key);
             }
         }
@@ -56,7 +57,7 @@ public class TwoOutOfThree {
 
 
     public static void main(String args[]) {
-         TwoOutOfThree tt = new TwoOutOfThree();
+        TwoOutOfThree tt = new TwoOutOfThree();
         ArrayList<Integer> a1 = new ArrayList<>();
         ArrayList<Integer> a2 = new ArrayList<>();
         ArrayList<Integer> a3 = new ArrayList<>();
