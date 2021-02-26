@@ -37,12 +37,12 @@ public class MaximumWidthOfABinaryTree {
     }
 
     public int findMaximum(TreeNode root) {
-        int maxWidth = 0;
+        int maximumWidth = 0;
         Queue<TreeNode> storeCurrentLevelNode = new LinkedList<>();
         storeCurrentLevelNode.add(root);
         while (!storeCurrentLevelNode.isEmpty()) {
             int sizeCurrent = storeCurrentLevelNode.size();
-            maxWidth = Math.max(maxWidth, sizeCurrent);
+            maximumWidth = Math.max(maximumWidth, sizeCurrent);
             while (sizeCurrent > 0) {
                 TreeNode temp = storeCurrentLevelNode.peek();
                 storeCurrentLevelNode.remove();
@@ -56,7 +56,7 @@ public class MaximumWidthOfABinaryTree {
             }
 
         }
-        return maxWidth;
+        return maximumWidth;
 
     }
 
