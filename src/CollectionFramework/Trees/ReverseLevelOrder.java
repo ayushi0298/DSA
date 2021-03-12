@@ -22,14 +22,20 @@ public class ReverseLevelOrder {
     public TreeNode createTree() {
 
         TreeNode a = new TreeNode(1);
-        TreeNode b = new TreeNode(6);
-        TreeNode c = new TreeNode(2);
-        TreeNode d = new TreeNode(3);
+        TreeNode b = new TreeNode(2);
+        TreeNode c = new TreeNode(3);
+        TreeNode d = new TreeNode(4);
         TreeNode e = new TreeNode(5);
+        TreeNode f = new TreeNode(6);
+        TreeNode g = new TreeNode(7);
+
         root = a;
         a.left = b;
         a.right = c;
-        c.left = d;
+        b.left = d;
+        b.right = e;
+        c.left = f;
+        c.right = g;
         return root;
     }
 
@@ -51,7 +57,7 @@ public class ReverseLevelOrder {
             }
 
         }
-        System.out.println(storeReverseOrder);
+
         while (!storeReverseOrder.isEmpty()) {
             int temp = storeReverseOrder.peek();
             result.add(temp);
