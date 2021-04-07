@@ -33,7 +33,6 @@ public class BalancedBinaryTree {
 
     //using global variable
     public int isBalanced(TreeNode root) {
-        //System.out.println(flag);
         findHeight(root);
         if (flag == true) {
             return 0;
@@ -63,3 +62,36 @@ public class BalancedBinaryTree {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
