@@ -3,7 +3,7 @@ package CollectionFramework.Heaps;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class HeapImplementation {
+public class  HeapImplementation {
 
     ArrayList<Integer> input = new ArrayList<>();
 
@@ -11,7 +11,7 @@ public class HeapImplementation {
         int temp = first;
         first = second;
         second = temp;
-    }
+    }   
 
     public static void sort(ArrayList<Integer> input) {
         int n = input.size();

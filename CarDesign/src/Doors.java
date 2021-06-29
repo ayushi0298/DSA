@@ -2,22 +2,6 @@ public class Doors {
     boolean isOpen;
     boolean isOpenWindow;
 
-    public boolean isDoorOpenClose() {
-        return isOpen;
-    }
-
-    public void setDoorOpenClose(boolean doorOpenClose) {
-        this.isOpen = doorOpenClose;
-    }
-
-    public boolean isOpenWindow() {
-        return isOpenWindow;
-    }
-
-    public void setOpenWindow(boolean openWindow) {
-        this.isOpenWindow = openWindow;
-    }
-
     public void doorOpen() {
         if (!isOpen) {
             isOpen = true;
@@ -28,7 +12,6 @@ public class Doors {
 
         }
     }
-
     public void doorClose() {
         if (isOpen) {
             isOpen = false;

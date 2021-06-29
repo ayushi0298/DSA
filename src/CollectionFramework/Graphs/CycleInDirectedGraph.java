@@ -50,7 +50,7 @@ public class CycleInDirectedGraph {
 
     }
 
-    public int solve(int A, ArrayList<ArrayList<Integer>> B) {
+    public int  solve(int A, ArrayList<ArrayList<Integer>> B) {
         vertices = A;
         graphCreation(vertices + 1);
 
@@ -66,15 +66,14 @@ public class CycleInDirectedGraph {
         }
 
         return 0;
-
     }
-
 
     public static void main(String args[]) {
         CycleInDirectedGraph cd = new CycleInDirectedGraph();
         int A = 2;
         ArrayList<ArrayList<Integer>> input = new ArrayList<>();
         input.add(new ArrayList<>(Arrays.asList(1, 2)));
+        input.add(new ArrayList<>(Arrays.asList(2,1)));
         System.out.println(cd.solve(A, input));
 
 

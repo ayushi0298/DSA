@@ -1,17 +1,9 @@
 public class Brakes {
-    boolean isBrakesApplied;
+    boolean Applied;
 
-    public boolean isBrakesApplied() {
-        return isBrakesApplied;
-    }
-
-    public void setBrakesApplied(boolean brakesApplied) {
-        isBrakesApplied = brakesApplied;
-    }
-
-    public void BrakesApplied() {
-        if (!isBrakesApplied) {
-            isBrakesApplied = true;
+    public void Applied() {
+        if (!Applied) {
+            Applied = true;
             System.out.println("Brake applied");
         } else {
             System.out.println("Brake already applied");
@@ -19,9 +11,9 @@ public class Brakes {
         }
     }
 
-    public void BrakesReleased() {
-        if (isBrakesApplied) {
-            isBrakesApplied = false;
+    public void Released() {
+        if (Applied) {
+            Applied = false;
             System.out.println("Brake released");
         } else {
             System.out.println("Brake already released");

@@ -1,27 +1,18 @@
 public class Accelerator {
-    boolean isAcceleratorApplied;
+    boolean Applied;
 
-    public boolean isAcceleratorApplied() {
-        return isAcceleratorApplied;
-    }
-
-    public void setAcceleratorApplied(boolean acceleratorApplied) {
-        isAcceleratorApplied = acceleratorApplied;
-    }
-
-    public void AcceleratorApplied() {
-        if (!isAcceleratorApplied) {
-            isAcceleratorApplied = true;
+    public void Applied() {
+        if (!Applied) {
+            Applied = true;
             System.out.println("Accelerator applied");
         } else {
             System.out.println("Accelerator already applied");
 
         }
     }
-
-    public void AcceleratorReleased() {
-        if (isAcceleratorApplied) {
-            isAcceleratorApplied = false;
+    public void Released() {
+        if (Applied) {
+            Applied = false;
             System.out.println("Accelerator released");
         } else {
             System.out.println("Accelerator already released");

@@ -4,90 +4,24 @@ import java.util.ArrayList;
 public class Car {
 
     String id;
+    ArrayList<Doors> doors = new ArrayList<>();
+    ArrayList<Doors> windows = new ArrayList<>();
+    ArrayList<Gears> gears = new ArrayList<>();
     boolean isEngineOn;
     boolean isAcOn;
-    ArrayList<Doors> doors = new ArrayList<>(4);
-    ArrayList<Doors> windows = new ArrayList<>(4);
-    ArrayList<Gears> gears = new ArrayList<>(3);
-    Brakes brakeApplied = new Brakes();
-    Accelerator acceleratorApplied = new Accelerator();
+    Brakes brake = new Brakes();
+    Accelerator accelerator = new Accelerator();
     boolean isCarLocked;
 
-    public Accelerator getAcceleratorApplied() {
-        return acceleratorApplied;
-    }
-
-    public void setAcceleratorApplied(Accelerator acceleratorApplied) {
-        this.acceleratorApplied = acceleratorApplied;
+    public Car(String id, ArrayList<Doors> doors, ArrayList<Doors> windows, ArrayList<Gears> gears) {
+        this.id = id;
+        this.doors = doors;
+        this.windows = windows;
+        this.gears = gears;
     }
 
     public Car(String id) {
         this.id = id;
-        for (int i = 0; i < 4; i++) {
-            doors.add(new Doors());
-        }
-        for (int i = 0; i < 4; i++) {
-            windows.add(new Doors());
-        }
-        for (int i = 0; i < 3; i++) {
-            gears.add(new Gears());
-        }
-    }
-
-    public ArrayList<Gears> getGears() {
-        return gears;
-    }
-
-    public void setGears(ArrayList<Gears> gears) {
-        this.gears = gears;
-    }
-
-    public ArrayList<Doors> getDoors() {
-        return doors;
-    }
-
-    public void setDoors(ArrayList<Doors> doors) {
-        this.doors = doors;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public boolean isCarLocked() {
-        return isCarLocked;
-    }
-
-    public void setCarLocked(boolean carLocked) {
-        isCarLocked = carLocked;
-    }
-
-    public boolean isAcOn() {
-        return isAcOn;
-    }
-
-    public void setAcOn(boolean acOn) {
-        isAcOn = acOn;
-    }
-
-    public Brakes getBrakeApplied() {
-        return brakeApplied;
-    }
-
-    public void setBrakeApplied(Brakes brakeApplied) {
-        this.brakeApplied = brakeApplied;
-    }
-
-    public boolean isEngineOn() {
-        return isEngineOn;
-    }
-
-    public void setEngineOn(boolean engineOn) {
-        this.isEngineOn = engineOn;
     }
 
     public void startCar() {
@@ -122,7 +56,7 @@ public class Car {
     }
 
     public void openDoor(int doorNumber) {
-        Doors door = doors.get(doorNumber);
+        Doors door =  doors.get(doorNumber);
         System.out.println("Operating door" + doorNumber);
         door.doorOpen();
     }
@@ -167,33 +101,17 @@ public class Car {
     public void gearApplied(int gearsNumber) {
         Gears gear = gears.get(gearsNumber);
         System.out.println("Operating gear" + gearsNumber);
-        gear.isGearsApplied();
+        gear.Applied();
     }
 
     public void gearReleased(int gearsNumber) {
         Gears gear = gears.get(gearsNumber);
         System.out.println("Operating gear" + gearsNumber);
-        gear.isGearsReleased();
-    }
-
-    public void acceleratorApplied() {
-        acceleratorApplied.AcceleratorApplied();
-    }
-
-    public void acceleratorReleased() {
-        acceleratorApplied.AcceleratorReleased();
-    }
-
-    public void brakeApplied() {
-        brakeApplied.BrakesApplied();
-    }
-
-    public void brakeReleased() {
-        brakeApplied.BrakesReleased();
+        gear.Released();
     }
 
     public void stopCarThroughBrakes() {
-        if (brakeApplied.isBrakesApplied) {
+        if (brake.Applied) {
             System.out.println("Car stopped for a while");
         } else {
             System.out.println("Brake is not applied till now");

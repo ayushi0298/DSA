@@ -27,7 +27,7 @@ public class PathWithGoodNodes {
         graph.get(y).add(x);
     }
 
-    public void findPaths(int source, ArrayList<Integer> input, int C, int count, boolean visited[]) {
+    public void     findPaths(int source, ArrayList<Integer> input, int C, int count, boolean visited[]) {
         int current;
         if (input.get(source - 1) == 1) {
             count++;

@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+
 public class Main {
+
     public static void main(String args[]) {
         Car car1 = new Car("A101");
         car1.startCar();
         car1.stopCar();
-        car1.openDoor(2);
-        car1.closeDoor(2);
+        car1.stopCarThroughBrakes();
+       // car1.acceleratorApplied();
+        /*car1.closeDoor(2);
         car1.openWindow(2);
         car1.openWindow(2);
         car1.closeWindow(2);
@@ -18,7 +22,7 @@ public class Main {
         car1.brakeApplied();
         car1.stopCarThroughBrakes();
         car1.brakeReleased();
-        car1.stopCarThroughBrakes();
+        car1.stopCarThroughBrakes();*/
 
     }
 }

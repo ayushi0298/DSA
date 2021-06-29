@@ -1,17 +1,9 @@
 public class Gears {
-    boolean isApplied;
+    boolean Applied;
 
-    public boolean isApplied() {
-        return isApplied;
-    }
-
-    public void setApplied(boolean applied) {
-        isApplied = applied;
-    }
-
-    public void isGearsApplied() {
-        if(!isApplied){
-            isApplied=true;
+    public void Applied() {
+        if(!Applied){
+            Applied=true;
             System.out.println("gears applied");
         }
         else{
@@ -19,9 +11,9 @@ public class Gears {
 
         }
     }
-    public void isGearsReleased() {
-        if(isApplied){
-            isApplied=false;
+    public void Released() {
+        if(Applied){
+            Applied=false;
             System.out.println("gears released");
         }
         else{
