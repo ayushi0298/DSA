@@ -1,4 +1,4 @@
 public class Engine {
-    boolean isEngineOn;
+    boolean isOn;
 
 }

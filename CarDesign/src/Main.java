@@ -3,10 +3,13 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String args[]) {
-        Car car1 = new Car("A101");
-        car1.startCar();
-        car1.stopCar();
+        Car car1 = new Car("A101", new ArrayList<>(4),new ArrayList<>(4));
+        car1.controller.brakeApplied();
         car1.stopCarThroughBrakes();
+
+        //car1.startCar();
+        //car1.stopCar();
+        //car1.stopCarThroughBrakes();
        // car1.acceleratorApplied();
         /*car1.closeDoor(2);
         car1.openWindow(2);

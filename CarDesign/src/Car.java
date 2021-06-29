@@ -7,10 +7,10 @@ public class Car {
     ArrayList<Doors> doors = new ArrayList<>();
     ArrayList<Doors> windows = new ArrayList<>();
     ArrayList<Gears> gears = new ArrayList<>();
-    boolean isEngineOn;
-    boolean isAcOn;
-    Brakes brake = new Brakes();
-    Accelerator accelerator = new Accelerator();
+    Engine engine = new Engine();
+    AC ac= new AC();
+    Controller controller = new Controller();
+
     boolean isCarLocked;
 
     public Car(String id, ArrayList<Doors> doors, ArrayList<Doors> windows, ArrayList<Gears> gears) {
@@ -24,9 +24,15 @@ public class Car {
         this.id = id;
     }
 
+    public Car(String id, ArrayList<Doors> doors, ArrayList<Gears> gears) {
+        this.id = id;
+        this.doors = doors;
+        this.gears = gears;
+    }
+
     public void startCar() {
-        if (!isEngineOn && !isCarLocked) {
-            isEngineOn = true;
+        if (!engine.isOn && !isCarLocked) {
+            engine.isOn = true;
             System.out.println("Car started");
         } else {
             System.out.println("Car already started");
@@ -35,8 +41,8 @@ public class Car {
     }
 
     public void stopCar() {
-        if (isEngineOn) {
-            isEngineOn = false;
+        if (engine.isOn) {
+            engine.isOn = false;
             System.out.println("Car stopped");
             carLock();
         } else {
@@ -56,7 +62,7 @@ public class Car {
     }
 
     public void openDoor(int doorNumber) {
-        Doors door =  doors.get(doorNumber);
+        Doors door = doors.get(doorNumber);
         System.out.println("Operating door" + doorNumber);
         door.doorOpen();
     }
@@ -80,17 +86,18 @@ public class Car {
     }
 
     public void onAC() {
-        if (!isAcOn) {
-            isAcOn = true;
+        if (!ac.isOn) {
+            ac.isOn = true;
             System.out.println("AC is on now");
         } else {
             System.out.println("AC is already on");
 
         }
     }
-    public void offAC(){
-        if (isAcOn) {
-            isAcOn = false;
+
+    public void offAC() {
+        if (ac.isOn) {
+            ac.isOn = false;
             System.out.println("AC is off now");
         } else {
             System.out.println("AC is already off");
@@ -111,7 +118,7 @@ public class Car {
     }
 
     public void stopCarThroughBrakes() {
-        if (brake.Applied) {
+        if (controller.Applied) {
             System.out.println("Car stopped for a while");
         } else {
             System.out.println("Brake is not applied till now");
