@@ -1,7 +1,5 @@
 package Interview.LinkedList;
 
-import java.util.ArrayList;
-
 public class ReverseALinkedList {
     static Node head;
 

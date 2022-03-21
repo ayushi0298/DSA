@@ -1,7 +1,7 @@
 public class Gears {
     boolean Applied;
 
-    public void Applied() {
+    protected void Applied() {
         if(!Applied){
             Applied=true;
             System.out.println("gears applied");
@@ -11,7 +11,7 @@ public class Gears {
 
         }
     }
-    public void Released() {
+    protected void Released() {
         if(Applied){
             Applied=false;
             System.out.println("gears released");

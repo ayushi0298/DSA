@@ -3,6 +3,7 @@ package Interview.HashMap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 //https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/
 /*algo:
@@ -39,9 +40,33 @@ public class PrintAnagramsTogether {
 
     public static void main(String args[]) {
         PrintAnagramsTogether pa = new PrintAnagramsTogether();
-        String input[] = {"cat", "tac", "dog", "god", "ased", "desa", "abcd", "dcba", "cdba", "bacd"};
+        String input[] = {"cat", "odg","tac", "dog", "god", "ased", "desa", "abcd", "dcba", "cdba", "bacd"};
         pa.printAnagrams(input);
-
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

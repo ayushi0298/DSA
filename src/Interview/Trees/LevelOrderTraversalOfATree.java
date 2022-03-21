@@ -63,62 +63,6 @@ public class LevelOrderTraversalOfATree {
 
     }
 
-    //using 2 queues
-    public void printlevelusingqueue(TreeNode root) {
-        Queue<TreeNode> q1 = new LinkedList<>();
-        Queue<TreeNode> q2 = new LinkedList<>();
-        if (root == null)
-            return;
-        q1.add(root);
-
-        while (!q1.isEmpty() || !q2.isEmpty()) {
-            while (!q1.isEmpty()) {
-                if (q1.peek().left != null) {
-                    q2.add(q1.peek().left);
-                }
-                if (q1.peek().right != null) {
-                    q2.add(q1.peek().right);
-                }
-                System.out.print(q1.peek().val + " ");
-                q1.remove();
-            }
-            System.out.println();
-            while (!q2.isEmpty()) {
-                if (q2.peek().left != null) {
-                    q1.add(q2.peek().left);
-                }
-                if (q2.peek().right != null) {
-                    q1.add(q2.peek().right);
-                }
-                System.out.print(q2.peek().val + " ");
-                q2.remove();
-            }
-            System.out.println();
-        }
-
-    }
-
-    public void printLevelUsingOneQueue(TreeNode root) {
-        Queue<TreeNode> q1 = new LinkedList<>();
-        q1.add(root);
-        while (true) {
-            int nodeCount = q1.size();
-            while (nodeCount > 0) {
-                TreeNode temp = q1.peek();
-                System.out.print(temp.val + " ");
-                q1.remove();
-                if (temp.left != null) {
-                    q1.add(temp.left);
-                }
-                if (temp.right != null) {
-                    q1.add(temp.right);
-                }
-                nodeCount--;
-            }
-        }
-    }
-
-
     public static void main(String args[]) {
 
         LevelOrderTraversalOfATree lo = new LevelOrderTraversalOfATree();

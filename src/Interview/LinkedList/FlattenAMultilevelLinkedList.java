@@ -78,14 +78,6 @@ public class FlattenAMultilevelLinkedList {
         Node n = fd.createList();
         fd.flattenedLinkedList(n);
 
-//        Node x= new Node(5,null,null);
-//        Node y= new Node(5,null,null);
-////        boolean z= (x==y);
-//        System.out.println(z);
-        fd.printLinkedList(n);
-        //fd.printList(head);
-        //fd.flattenedLinkedList(head);
-
 
     }
 

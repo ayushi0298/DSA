@@ -2,7 +2,7 @@ public class Doors {
     boolean isOpen;
     boolean isOpenWindow;
 
-    public void doorOpen() {
+    protected void doorOpen() {
         if (!isOpen) {
             isOpen = true;
             System.out.println(" door opened");
@@ -12,7 +12,7 @@ public class Doors {
 
         }
     }
-    public void doorClose() {
+    protected void doorClose() {
         if (isOpen) {
             isOpen = false;
             System.out.println("Door closed");
@@ -23,7 +23,7 @@ public class Doors {
 
     }
 
-    public void windowOpen() {
+    protected void windowOpen() {
         if (!isOpenWindow) {
             isOpenWindow = true;
             System.out.println("Window opened");
@@ -34,7 +34,7 @@ public class Doors {
         }
     }
 
-    public void windowClose() {
+    protected void windowClose() {
         if (isOpenWindow) {
             isOpenWindow = false;
             System.out.println("Window closed");

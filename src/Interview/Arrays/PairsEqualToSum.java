@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-//geeksforgeeks.org/adobe-interview-set-8-off-campus/
+//https://practice.geeksforgeeks.org/problems/pair-with-given-sum-in-a-sorted-array4940/1
 public class PairsEqualToSum {
     int countPairs = 0;
 
@@ -33,9 +33,11 @@ public class PairsEqualToSum {
         PairsEqualToSum pq = new PairsEqualToSum();
         ArrayList<Integer> input = new ArrayList<>();
         input.add(1);
-        input.add(2);
-        input.add(3);
-        int sum = 4;
+        input.add(5);
+        input.add(7);
+        input.add(-1);
+        input.add(5);
+        int sum = 6;
         System.out.println(pq.findPairs(input, sum));
     }
 

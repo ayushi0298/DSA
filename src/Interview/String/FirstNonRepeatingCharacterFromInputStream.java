@@ -28,6 +28,7 @@ public class FirstNonRepeatingCharacterFromInputStream {
                     ", value2=" + value2 +
                     '}';
         }
+
     }
 
     /*public String wrongfirstNonRepeating(String input) {
