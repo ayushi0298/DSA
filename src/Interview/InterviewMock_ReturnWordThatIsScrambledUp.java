@@ -1,8 +1,13 @@
 package Interview;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class InterviewMock_ReturnWordThatIsScrambledUp {
+    //space: O(s) for every word in array we need 26 size hashmap
+    //time: O(w * s) for every word in array we need
     public String find_embedded_word(String[] myArray, String s1) {
         String stringFound;
         HashMap<Character, Integer> storesCharacters = new HashMap<>();
@@ -30,18 +35,86 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
                 }
 
             }
-            if(found==true){
+            if (found == true) {
                 return stringFound;
             }
         }
         return null;
     }
 
+    public ArrayList<int[]> dfs(char[][] input, String s1, int i, int j, int k) {
+        ArrayList<int[]> output = new ArrayList<>();
+        if (k == s1.length() - 1 && s1.charAt(k) == input[i][j]) {
+            output.add(new int[]{i, j});
+            return output;
+        }
+        if (k < s1.length() && s1.charAt(k) == input[i][j]) {
+            if (i + 1 < input.length) {
+                output = dfs(input, s1, i + 1, j, k + 1);
+                if (output.size() != 0) {
+                    output.add(new int[]{i, j});
+                    return output;
+                }
+
+            }
+            if (j + 1 < input[0].length) {
+                output = dfs(input, s1, i, j + 1, k + 1);
+                if (output.size() != 0) {
+                    output.add(new int[]{i, j});
+                    return output;
+                }
+            }
+        }
+
+        return output;
+    }
+
+    //time complexity: r * c * lengthOfString
+    // space:  r* c* lengthOfString
+    public ArrayList<int[]> find_embedded_word_in2Darray(char[][] input, String s1) {
+        for (int i = 0; i < input.length; i++) {
+            for (int j = 0; j < input[0].length; j++) {
+                if (s1.charAt(0) == input[i][j]) {
+                    ArrayList<int[]> output = dfs(input, s1, i, j, 0);
+                    if (!output.isEmpty()) {
+                        return output;
+                    }
+                }
+            }
+        }
+        return null;
+    }
     public static void main(String args[]) {
         InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
-        String[] myArray = new String[]{"baby","dog", "bird","car","ax"};
-        String s1 = "breakingdog";
-        System.out.println(it.find_embedded_word(myArray, s1));
+        char[][] grid1 = {
+                {'c', 'c', 'x', 't', 'i', 'b'},
+                {'c', 'c', 'a', 't', 'n', 'i'},
+                {'a', 'c', 'n', 'n', 't', 't'},
+                {'t', 'c', 's', 'i', 'p', 't'},
+                {'a', 'o', 'o', 'o', 'a', 'a'},
+                {'o', 'a', 'a', 'a', 'o', 'o'},
+                {'k', 'a', 'i', 'c', 'k', 'i'}
+        };
 
+        String[] inputs = new String[]{"catnip", "cccc", "s", "bit", "aoi", "ki", "aaa", "ooo"};
+        // System.out.println(Arrays.toString(it.find _embedded_word_in2Darray(grid1,word1)));
+        for (String input : inputs) {
+            System.out.println(input);
+            ArrayList<int[]> result = it.find_embedded_word_in2Darray(grid1, input);
+            Collections.reverse(result);
+            for (int[] i : result) {
+                System.out.println(Arrays.toString(i));
+            }
+
+            System.out.println();
+            System.out.println();
+        }
     }
+   /*public static void main(String args[]) {
+       InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
+       String[] myArray = new String[]{"baby", "dog", "bird", "car", "ax"};
+       String s1 = "babyusye";
+       System.out.println(it.find_embedded_word(myArray, s1));
+   }*/
+
 }
