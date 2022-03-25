@@ -56,12 +56,12 @@ public class ValidBSTFromPreorder {
             storeIndexes.add(-1);
         }
         int root=0;
-        //System.out.println(storeIndexes);
         for (int i = 0; i < input.size(); i++) {
             if(input.get(i)<root){
                 return false;
             }
-            while (!stack.isEmpty() && input.get(i) > input.get(stack.peek())) {//while use kiya bc we are checking ki input.get(stack.peek()) kis kis ka greatest element ho sakta
+            ////while use kiya bc we are checking ki input.get(stack.peek()) kis kis ka greatest element ho sakta
+            while (!stack.isEmpty() && input.get(i) > input.get(stack.peek())) {
                 root = input.get(stack.peek());
                 storeIndexes.set(stack.peek(), i);
                 stack.pop();
@@ -75,7 +75,7 @@ public class ValidBSTFromPreorder {
         ValidBSTFromPreorder bst = new ValidBSTFromPreorder();
        // ArrayList<Integer> input = new ArrayList<>(Arrays.asList(40, 32, 30, 35));
         //ArrayList<Integer> input = new ArrayList<>(Arrays.asList(2,4,3));
-       ArrayList<Integer> input = new ArrayList<>(Arrays.asList(2,4,1));
+       ArrayList<Integer> input = new ArrayList<>(Arrays.asList(2,1,3));
         System.out.println(bst.validBST(input));
     }
 }

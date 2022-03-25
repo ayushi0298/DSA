@@ -61,7 +61,7 @@ public class CousinsInBinaryTree {
     public ArrayList<Integer> solve(TreeNode A, int B) {
         int levelOfB=0;
         Queue<Pair> storePair = new LinkedList<>();
-        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<Integer> result;
         ArrayList<Integer> finalResult = new ArrayList<>();
         HashMap<Integer, Integer> storeRoot = new HashMap<>();
         HashMap<Integer, ArrayList<Integer>> storeCousins = new HashMap<>();

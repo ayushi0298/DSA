@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 //https://www.interviewbit.com/problems/highest-product/
 public class HighestProductGreedy {
-    int product = 1, n = 0, x, y;
+    int n = 0, x, y;
 
     public int findProduct(ArrayList<Integer> input) {
         int size = input.size() - 1;
@@ -13,7 +13,7 @@ public class HighestProductGreedy {
             return -1;
         } else {
             Collections.sort(input);
-            System.out.println(input + " " + n);
+            //System.out.println(input + " " + n);
             x = input.get(0) * input.get(1) * input.get(size);
             y = input.get(size) * input.get(size - 1) * input.get(size - 2);
         }

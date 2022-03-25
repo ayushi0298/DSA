@@ -28,7 +28,6 @@ public class CycleInDirectedGraph {
 
     public boolean isCycle(int source, boolean[] visited, boolean[] recStack) {
 
-
         if (recStack[source]) {
             return true;
         }
@@ -39,7 +38,7 @@ public class CycleInDirectedGraph {
         visited[source] = true;
         recStack[source] = true;
         ArrayList<Integer> adjacentNodes = graph.get(source);
-        System.out.println(adjacentNodes);
+        //System.out.println(adjacentNodes);
         for (Integer i : adjacentNodes) {
             if (isCycle(i, visited, recStack)) {
                 return true;
