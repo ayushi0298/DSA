@@ -11,7 +11,8 @@ public class KLargestElements {
         for (int i = 0; i < input.size(); i++) {
             queue.add(input.get(i));
         }
-        System.out.println(queue);
+        System.out.println("reverse: " + queue);
+        //System.out.println(queue);
         for (int i = 0; i <k; i++){
             int currentPeek = queue.peek();
             result.add(currentPeek);

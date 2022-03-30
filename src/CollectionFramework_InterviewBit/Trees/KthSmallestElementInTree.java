@@ -46,15 +46,16 @@ public class KthSmallestElementInTree {
         return findKthSmallest(root.right, k);
     }
 
-
     public int kthsmallest(TreeNode root, int k) {
         TreeNode result = findKthSmallest(root, k);
-        if (result != null) {
+        if (result!=null){
             return result.val;
-        } else {
+        }
+        else {
             return 0;
         }
     }
+
 
 
     public static void main(String args[]) {
