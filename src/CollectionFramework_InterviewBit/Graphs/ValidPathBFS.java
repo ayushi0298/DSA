@@ -2,7 +2,7 @@ package CollectionFramework_InterviewBit.Graphs;
 
 import java.util.List;
 //https://www.interviewbit.com/problems/valid-path/
-public class ValidPathDFS {
+public class ValidPathBFS {
     boolean[][] markReachable;
     //arrays for finding 8 adjecent of a point
     int xOffset[] = {1, -1, 0, 0,1,-1,-1,1};
@@ -75,7 +75,7 @@ public class ValidPathDFS {
 
     }
 //    public String solve(int rows, int columns, int circles, int radius, ArrayList<Integer> E, ArrayList<Integer> F) {
-//        CollectionFramework.Graphs.ValidPathDFS vd = new CollectionFramework.Graphs.ValidPathDFS();
+//        CollectionFramework.Graphs.ValidPathBFS vd = new CollectionFramework.Graphs.ValidPathBFS();
 //        vd.markCoordinates(circles, rows, columns, radius, convertIntegers(E), convertIntegers(F));
 //        return callingDFS(rows, columns);
 //    }
@@ -89,7 +89,7 @@ public class ValidPathDFS {
     }
 
     public static void main(String args[]) {
-        ValidPathDFS vd = new ValidPathDFS();
+        ValidPathBFS vd = new ValidPathBFS();
         int rows, columns, circles, radius;
         rows = 41;
         columns = 67;

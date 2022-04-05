@@ -1,6 +1,6 @@
 
 package CollectionFramework_InterviewBit.Trees;
-
+//https://www.interviewbit.com/problems/zigzag-level-order-traversal-bt/
 import java.util.*;
 
 public class ZigZagLevelOrderTraversalBT {
@@ -60,7 +60,7 @@ public class ZigZagLevelOrderTraversalBT {
                 TreeNode node = alternate2.pop();
                 list.add(node.val);
 
-                if (node.right != null){
+                if (node.right != null) {
                     alternate1.push(node.right);
                 }
                 if (node.left != null) {
@@ -80,7 +80,7 @@ public class ZigZagLevelOrderTraversalBT {
     public static void main(String args[]) {
         ZigZagLevelOrderTraversalBT z = new ZigZagLevelOrderTraversalBT();
         root = z.createTree();
-        System.out.println(Arrays.toString(z.zigzagLevelOrder(root)));
+        System.out.println((z.zigzagLevelOrder(root)));
     }
 }
 
