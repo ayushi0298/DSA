@@ -1,5 +1,7 @@
 package CollectionFramework_InterviewBit.DynamicProgramming;
+
 //https://www.interviewbit.com/problems/longest-common-subsequence/
+//TOP DOWN APPROACH( RECURSION + MEMOISATION)
 public class LongestCommonSubsequence {
     public int longestSubsequence(char[] c1, char[] c2) {
         int m = c1.length;

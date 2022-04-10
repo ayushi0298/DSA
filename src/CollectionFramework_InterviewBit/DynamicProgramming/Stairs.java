@@ -18,7 +18,7 @@ public class Stairs {
         for (int i = 2; i < A; i++) {
             dp[i] = dp[i - 1] + dp[i - 2];
         }
-        System.out.println(Arrays.toString(dp));
+        //System.out.println(Arrays.toString(dp));
 
         return dp[A - 1];
     }
