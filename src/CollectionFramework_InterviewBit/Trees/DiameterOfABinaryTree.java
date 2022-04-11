@@ -6,7 +6,6 @@ import java.util.Stack;
 public class DiameterOfABinaryTree {
     static TreeNode root;
     static int maxDiameter;
-    static int heightL = 0;
 
     public class TreeNode {
         int val;
@@ -42,7 +41,7 @@ public class DiameterOfABinaryTree {
         }
         int leftSubtreeDepth = findDiameter(root.left);
         int rightSubtreeDepth = findDiameter(root.right);
-        System.out.println("Node: " +root.val + " leftSubtree: " + leftSubtreeDepth + " rightSubTree: " + rightSubtreeDepth);
+        //System.out.println("Node: " + root.val + " leftSubtree: " + leftSubtreeDepth + " rightSubTree: " + rightSubtreeDepth);
         maxDiameter = Math.max(maxDiameter, leftSubtreeDepth + rightSubtreeDepth);
         return Math.max(leftSubtreeDepth, rightSubtreeDepth) + 1;
     }
