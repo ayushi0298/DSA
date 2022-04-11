@@ -30,17 +30,6 @@ public class MaximumLevelSum {
         return root;
     }
 
-    public class Pair {
-        TreeNode node;
-        int level;
-
-        Pair(TreeNode node, int level) {
-            this.node = node;
-            this.level = level;
-        }
-
-    }
-
     public int solve(TreeNode A) {
         if (A == null) {
             return 0;
