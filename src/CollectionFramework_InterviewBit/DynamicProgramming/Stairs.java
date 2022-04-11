@@ -24,8 +24,8 @@ public class Stairs {
     }
 
     public static void main(String args[]) {
-        Stairs lc = new Stairs();
+        Stairs s = new Stairs();
         int A = 4;
-        System.out.println(lc.climbStairs(A));
+        System.out.println(s.climbStairs(A));
     }
 }

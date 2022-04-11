@@ -34,7 +34,7 @@ public class DiagonalTraversal {
     }
 
     public void diagonalDistance(TreeNode root, int distance, HashMap<Integer, ArrayList<Integer>> storesDiagonalNodes) {
-
+        System.out.println(root);
         if (root == null) {
             return;
         }

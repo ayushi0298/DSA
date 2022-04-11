@@ -1,9 +1,12 @@
 package CollectionFramework_InterviewBit.Trees;
 
+import java.util.Stack;
+
 //https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
 public class DiameterOfABinaryTree {
     static TreeNode root;
-    static int maxDiameter = 0;
+    static int maxDiameter;
+    static int heightL = 0;
 
     public class TreeNode {
         int val;
@@ -33,44 +36,28 @@ public class DiameterOfABinaryTree {
         return root;
     }
 
-    public int findDiameter(TreeNode root, int distance) {
-        int leftPath, rightPath;
+    public int findDiameter(TreeNode root) {
         if (root == null) {
             return 0;
         }
-
-        leftPath = findDiameter(root.left, distance + 1);
-        rightPath = findDiameter(root.right, distance + 1);
-
-        distance = leftPath + rightPath + 1;
-
-        if (distance > maxDiameter) {
-            maxDiameter = distance;
-        }
-        return maxDiameter;
-
+        int leftSubtreeDepth = findDiameter(root.left);
+        int rightSubtreeDepth = findDiameter(root.right);
+        System.out.println("Node: " +root.val + " leftSubtree: " + leftSubtreeDepth + " rightSubTree: " + rightSubtreeDepth);
+        maxDiameter = Math.max(maxDiameter, leftSubtreeDepth + rightSubtreeDepth);
+        return Math.max(leftSubtreeDepth, rightSubtreeDepth) + 1;
     }
 
-    public int findDiameter(TreeNode root) {
-        int leftPath, rightPath;
-        if (root == null) {
-            return 0;
-        }
-        leftPath = findDiameter(root.left);
-        rightPath = findDiameter(root.right);
-
-        int curDiameter = leftPath + rightPath + 1;
-        if (curDiameter > maxDiameter) {
-            maxDiameter = curDiameter;
-        }
-        return Math.max(leftPath, rightPath) + 1;
+    public int diameterOfBinaryTree(TreeNode root) {
+        maxDiameter = 0;
+        findDiameter(root);
+        return maxDiameter;
     }
 
     public static void main(String args[]) {
         DiameterOfABinaryTree db = new DiameterOfABinaryTree();
         root = db.createTree();
 //      System.out.println(db.findDiameter(root, 0));
-        System.out.println(db.findDiameter(root));
+        System.out.println(db.diameterOfBinaryTree(root));
         //db.findDiameter(root);
         System.out.println(maxDiameter);
 
