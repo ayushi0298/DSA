@@ -1,7 +1,5 @@
 package CollectionFramework_InterviewBit.Trees;
 
-import java.util.Stack;
-
 //https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
 public class DiameterOfABinaryTree {
     static TreeNode root;
@@ -55,9 +53,7 @@ public class DiameterOfABinaryTree {
     public static void main(String args[]) {
         DiameterOfABinaryTree db = new DiameterOfABinaryTree();
         root = db.createTree();
-//      System.out.println(db.findDiameter(root, 0));
         System.out.println(db.diameterOfBinaryTree(root));
-        //db.findDiameter(root);
         System.out.println(maxDiameter);
 
     }
