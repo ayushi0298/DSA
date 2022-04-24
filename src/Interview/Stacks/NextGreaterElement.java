@@ -2,11 +2,12 @@ package Interview.Stacks;
 
 import java.util.Arrays;
 import java.util.Stack;
+
 //https://www.interviewbit.com/problems/nextgreater/
 public class NextGreaterElement {
     public int[] nextGreater(int[] A) {
         int[] output = new int[A.length];
-        Arrays.fill(output,-1);
+        Arrays.fill(output, -1);
         Stack<Integer> storesElements = new Stack<>();
         for (int i = 0; i < A.length; i++) {
             while (!storesElements.isEmpty() && A[i] > A[storesElements.peek()]) {

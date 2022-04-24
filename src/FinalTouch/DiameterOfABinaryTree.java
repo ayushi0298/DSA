@@ -1,4 +1,4 @@
-package CollectionFramework_InterviewBit.Trees;
+package FinalTouch;
 
 //https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
 public class DiameterOfABinaryTree {

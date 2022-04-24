@@ -10,6 +10,7 @@ public class BinarySearchTreeImplementation {
             leftChild = rightChild = null;
         }
     }
+
     TreeNode root;
 
     public BinarySearchTreeImplementation(int value) {
@@ -45,20 +46,24 @@ public class BinarySearchTreeImplementation {
             inOrderRecursively(root.rightChild);
         }
     }
-    public void postOrder(){
+
+    public void postOrder() {
         inOrderRecursively(root);
     }
-    void postOrderRecursively(TreeNode root){
+
+    void postOrderRecursively(TreeNode root) {
         if (root != null) {
             inOrderRecursively(root.leftChild);
             inOrderRecursively(root.rightChild);
             System.out.println(root.value);
         }
     }
-    public void preOrder(){
+
+    public void preOrder() {
         preOrderRecursively(root);
     }
-    void preOrderRecursively(TreeNode root){
+
+    void preOrderRecursively(TreeNode root) {
         if (root != null) {
             System.out.println(root.value);
             inOrderRecursively(root.leftChild);
@@ -66,6 +71,7 @@ public class BinarySearchTreeImplementation {
 
         }
     }
+
     public static void main(String args[]) {
         BinarySearchTreeImplementation bst = new BinarySearchTreeImplementation(6);
         bst.insertInBst(3);
