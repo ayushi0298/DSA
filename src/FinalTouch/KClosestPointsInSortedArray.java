@@ -6,10 +6,12 @@ import java.util.ArrayList;
 public class KClosestPointsInSortedArray {
     public int findCrossoverPoint(int arr[], int low, int high, int x) {
 
-        if (arr[high] <= x)
+        if (arr[high] <= x) {
             return high;
-        if (arr[low] > x)
+        }
+        if (arr[low] > x) {
             return low;
+        }
 
         int mid = (low + high) / 2;
 

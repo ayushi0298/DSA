@@ -30,7 +30,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
             }
             for (Character key : storesWords.keySet()) {
                 if (storesWords.get(key) > storesCharacters.getOrDefault(key, 0)) {
-                    //System.out.println("key is: " + storesWords.get(key));
+                    System.out.println("key is: " + storesWords.get(key));
                     found = false;
                 }
 
@@ -55,7 +55,6 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
                     output.add(new int[]{i, j});
                     return output;
                 }
-
             }
             if (j + 1 < input[0].length) {
                 output = dfs(input, s1, i, j + 1, k + 1);
@@ -84,6 +83,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         }
         return null;
     }
+
     public static void main(String args[]) {
         InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
         char[][] grid1 = {
@@ -110,11 +110,11 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
             System.out.println();
         }
     }
-   /*public static void main(String args[]) {
-       InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
-       String[] myArray = new String[]{"baby", "dog", "bird", "car", "ax"};
-       String s1 = "babyusye";
-       System.out.println(it.find_embedded_word(myArray, s1));
-   }*/
-
+   /* public static void main(String args[]) {
+        InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
+        String[] myArray = new String[]{"baby", "dog", "bird", "car", "ax"};
+        String s1 = "babyusye";
+        System.out.println(it.find_embedded_word(myArray, s1));
+    }
+*/
 }
