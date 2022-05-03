@@ -3,6 +3,9 @@ package Interview;
 import java.util.HashMap;
 
 //https://docs.google.com/document/d/1d7H9knHVCbYhWUJMVoZRdD63l5mIgel0h7POvbh2-HY/edit
+
+//TC: O(N) + 0(9)= 0(N)
+//SC: Hashmap of constant size
 public class InterviewMockKarat {
     //Part one
     public boolean completeHand(String number) {
