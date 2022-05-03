@@ -13,9 +13,8 @@ public class InterviewMockKarat {
             if (!storeCount.containsKey(number.charAt(c))) {
                 storeCount.put(number.charAt(c), 1);
 
-            } else {
-                storeCount.put(number.charAt(c), storeCount.get(number.charAt(c)) + 1);
             }
+            storeCount.put(number.charAt(c), storeCount.get(number.charAt(c)) + 1);
         }
 
         for (char key : storeCount.keySet()) {
