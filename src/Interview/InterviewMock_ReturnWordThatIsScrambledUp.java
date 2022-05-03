@@ -43,8 +43,10 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
     }
 
     public ArrayList<int[]> dfs(char[][] input, String s1, int i, int j, int k) {
+      //  System.out.println("LENTH " + s1.length());
         ArrayList<int[]> output = new ArrayList<>();
         if (k == s1.length() - 1 && s1.charAt(k) == input[i][j]) {
+            System.out.println(" ADDED HERE");
             output.add(new int[]{i, j});
             return output;
         }
@@ -52,6 +54,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
             if (i + 1 < input.length) {
                 output = dfs(input, s1, i + 1, j, k + 1);
                 if (output.size() != 0) {
+                    System.out.println(" ADDED PAIR");
                     output.add(new int[]{i, j});
                     return output;
                 }
@@ -59,6 +62,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
             if (j + 1 < input[0].length) {
                 output = dfs(input, s1, i, j + 1, k + 1);
                 if (output.size() != 0) {
+                    System.out.println(" ADDED PAIRsssss");
                     output.add(new int[]{i, j});
                     return output;
                 }
@@ -74,6 +78,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         for (int i = 0; i < input.length; i++) {
             for (int j = 0; j < input[0].length; j++) {
                 if (s1.charAt(0) == input[i][j]) {
+                    System.out.println(i + " and"  + j);
                     ArrayList<int[]> output = dfs(input, s1, i, j, 0);
                     if (!output.isEmpty()) {
                         return output;
@@ -96,7 +101,9 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
                 {'k', 'a', 'i', 'c', 'k', 'i'}
         };
 
-        String[] inputs = new String[]{"catnip", "cccc", "s", "bit", "aoi", "ki", "aaa", "ooo"};
+       // String[] inputs = new String[]{"catnip", "cccc", "s", "bit", "aoi", "ki", "aaa", "ooo"};
+        String[] inputs = new String[]{"ti"};
+
         // System.out.println(Arrays.toString(it.find _embedded_word_in2Darray(grid1,word1)));
         for (String input : inputs) {
             System.out.println(input);

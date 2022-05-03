@@ -25,9 +25,6 @@ public class InterviewMockKarat {
                 storeCount.put(key, storeCount.get(key) % 3);
             }
         }
-       /* for (char c : storeCount.keySet()) {
-            System.out.println("KEY : " + c + " value" + storeCount.get(c));
-        }*/
         for (char key : storeCount.keySet()) {
             if (storeCount.get(key) != 0 && (storeCount.get(key) % 2) == 0) {
                 storeCount.put(key, 0);
@@ -35,7 +32,6 @@ public class InterviewMockKarat {
                 if (countPair > 1) {
                     return false;
                 }
-
             } else {
                 storeCount.put(key, storeCount.get(key) % 2);
             }
@@ -43,9 +39,7 @@ public class InterviewMockKarat {
         if (countPair == 0) {
             return false;
         }
-
         for (char key : storeCount.keySet()) {
-
             if (storeCount.get(key) != 0) {
                 others++;
             }
@@ -56,7 +50,6 @@ public class InterviewMockKarat {
 
         return true;
     }
-
 
     public static void main(String args[]) {
         InterviewMockKarat it = new InterviewMockKarat();
