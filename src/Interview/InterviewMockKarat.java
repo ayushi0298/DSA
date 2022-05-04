@@ -55,7 +55,7 @@ public class InterviewMockKarat {
 
     public static void main(String args[]) {
         InterviewMockKarat it = new InterviewMockKarat();
-        String tile = "1111122222";
+        String tile = "999999999";
         System.out.println(it.completeHand(tile));
     }
 }
