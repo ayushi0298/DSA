@@ -16,8 +16,9 @@ public class InterviewMockKarat {
             if (!storeCount.containsKey(number.charAt(c))) {
                 storeCount.put(number.charAt(c), 1);
 
+            } else {
+                storeCount.put(number.charAt(c), storeCount.get(number.charAt(c)) + 1);
             }
-            storeCount.put(number.charAt(c), storeCount.get(number.charAt(c)) + 1);
         }
 
         for (char key : storeCount.keySet()) {
@@ -55,7 +56,7 @@ public class InterviewMockKarat {
 
     public static void main(String args[]) {
         InterviewMockKarat it = new InterviewMockKarat();
-        String tile = "999999999";
+        String tile = "111333555";
         System.out.println(it.completeHand(tile));
     }
 }

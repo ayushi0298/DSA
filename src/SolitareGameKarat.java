@@ -10,7 +10,7 @@ public class SolitareGameKarat {
             int x1 = row + dx[i];
             int y1 = column + dy[i];
             //System.out.println(" before x1 " + x1 + " y1 " + y1 + " "  + grid.length);
-            if (x1 >= 0 && x1 < grid.length && y1 >= 0 && y1 < grid[row].length && grid[row][column] == grid[x1][y1] && visited[x1][y1] == -1) {
+            if (x1 >= 0 && x1 < grid.length && y1 >= 0 && y1 < grid[row].length && grid[row][column] == grid[x1][y1] && visited[x1][y1] == 0) {
                 // System.out.println(" x1 " + x1 + " y1 " + y1);
                 visited[x1][y1] = 1;
                 counts++;
@@ -24,16 +24,8 @@ public class SolitareGameKarat {
     public int countDisappears(int[][] grid, int row, int column) {
         //System.out.println("ROWS : " + grid.length + "COLUMNS : " + grid[0].length);
         int[][] visited = new int[grid.length][grid[0].length];
-        for (int i = 0; i < visited.length; i++) {
-            for (int j = 0; j < visited[row].length; j++) {
-                visited[i][j] = -1;
-            }
-        }
         visited[row][column] = 1;
         counts++;
-        if (grid.length == 1) {
-            return 1;
-        }
         int count = dfs(grid, row, column, visited);
         if (count != 0) {
             return count;
@@ -66,7 +58,7 @@ public class SolitareGameKarat {
         int[][] grid5 = {{0},
         };
 
-        System.out.println(sg.countDisappears(grid4, 0, 0));
+        System.out.println(sg.countDisappears(grid2, 1, 0));
         //  System.out.println(sg.countDisappears(grid3, 0, 0));
     }
 

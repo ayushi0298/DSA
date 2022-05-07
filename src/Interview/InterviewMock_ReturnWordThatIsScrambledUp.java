@@ -14,8 +14,9 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         for (char i = 0; i < s1.length(); i++) {
             if (!storesCharacters.containsKey(s1.charAt(i))) {
                 storesCharacters.put(s1.charAt(i), 1);
+            } else {
+                storesCharacters.put(s1.charAt(i), storesCharacters.get(s1.charAt(i)) + 1);
             }
-            storesCharacters.put(s1.charAt(i), storesCharacters.get(s1.charAt(i)) + 1);
         }
         for (int i = 0; i < myArray.length; i++) {
             boolean found = true;
@@ -30,7 +31,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
             }
             for (Character key : storesWords.keySet()) {
                 if (storesWords.get(key) > storesCharacters.getOrDefault(key, 0)) {
-                    System.out.println("key is: " + storesWords.get(key));
+                    // System.out.println("key is: " + storesWords.get(key));
                     found = false;
                 }
 
@@ -43,10 +44,10 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
     }
 
     public ArrayList<int[]> dfs(char[][] input, String s1, int i, int j, int k) {
-      //  System.out.println("LENTH " + s1.length());
+        //  System.out.println("LENTH " + s1.length());
         ArrayList<int[]> output = new ArrayList<>();
         if (k == s1.length() - 1 && s1.charAt(k) == input[i][j]) {
-            System.out.println(" ADDED HERE");
+            //System.out.println(" ADDED HERE");
             output.add(new int[]{i, j});
             return output;
         }
@@ -54,7 +55,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
             if (i + 1 < input.length) {
                 output = dfs(input, s1, i + 1, j, k + 1);
                 if (output.size() != 0) {
-                    System.out.println(" ADDED PAIR");
+                    // System.out.println(" ADDED PAIR");
                     output.add(new int[]{i, j});
                     return output;
                 }
@@ -62,7 +63,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
             if (j + 1 < input[0].length) {
                 output = dfs(input, s1, i, j + 1, k + 1);
                 if (output.size() != 0) {
-                    System.out.println(" ADDED PAIRsssss");
+                    // System.out.println(" ADDED PAIRsssss");
                     output.add(new int[]{i, j});
                     return output;
                 }
@@ -78,7 +79,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         for (int i = 0; i < input.length; i++) {
             for (int j = 0; j < input[0].length; j++) {
                 if (s1.charAt(0) == input[i][j]) {
-                    System.out.println(i + " and"  + j);
+                    //System.out.println(i + " and"  + j);
                     ArrayList<int[]> output = dfs(input, s1, i, j, 0);
                     if (!output.isEmpty()) {
                         return output;
@@ -89,32 +90,31 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         return null;
     }
 
-    public static void main(String args[]) {
-        InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
-        char[][] grid1 = {
-                {'c', 'c', 'x', 't', 'i', 'b'},
-                {'c', 'c', 'a', 't', 'n', 'i'},
-                {'a', 'c', 'n', 'n', 't', 't'},
-                {'t', 'c', 's', 'i', 'p', 't'},
-                {'a', 'o', 'o', 'o', 'a', 'a'},
-                {'o', 'a', 'a', 'a', 'o', 'o'},
-                {'k', 'a', 'i', 'c', 'k', 'i'}
-        };
+        public static void main(String args[]) {
+            InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
+            char[][] grid1 = {
+                    {'c', 'c', 'x', 't', 'i', 'b'},
+                    {'c', 'c', 'a', 't', 'n', 'i'},
+                    {'a', 'c', 'n', 'n', 't', 't'},
+                    {'t', 'c', 's', 'i', 'p', 't'},
+                    {'a', 'o', 'o', 'o', 'a', 'a'},
+                    {'o', 'a', 'a', 'a', 'o', 'o'},
+                    {'k', 'a', 'i', 'c', 'k', 'i'}
+            };
+            char[][] grid2 = {{'a'}};
+            String[] word9 = new String[]{"a"};
 
-       // String[] inputs = new String[]{"catnip", "cccc", "s", "bit", "aoi", "ki", "aaa", "ooo"};
-        String[] inputs = new String[]{"ti"};
+            String[] inputs = new String[]{"catnip", "cccc", "s", "bit", "aoi", "ki", "aaa", "ooo"};
+            //String[] inputs = new String[]{"ti"};
 
-        // System.out.println(Arrays.toString(it.find _embedded_word_in2Darray(grid1,word1)));
-        for (String input : inputs) {
+            //  System.out.println(Arrays.toString(it.find _embedded_word_in2Darray(grid2,word9)));
+            for (String input : inputs) {
             System.out.println(input);
             ArrayList<int[]> result = it.find_embedded_word_in2Darray(grid1, input);
             Collections.reverse(result);
             for (int[] i : result) {
                 System.out.println(Arrays.toString(i));
             }
-
-            System.out.println();
-            System.out.println();
         }
     }
    /* public static void main(String args[]) {
@@ -122,6 +122,5 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         String[] myArray = new String[]{"baby", "dog", "bird", "car", "ax"};
         String s1 = "babyusye";
         System.out.println(it.find_embedded_word(myArray, s1));
-    }
-*/
+    }*/
 }
