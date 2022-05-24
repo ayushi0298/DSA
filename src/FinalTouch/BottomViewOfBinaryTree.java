@@ -64,12 +64,12 @@ public class BottomViewOfBinaryTree {
     }
 
     public void bottomView(TreeNode root) {
-        int sum=0;
+        int sum = 0;
         findBottomView(root, 0, 0);
         for (Map.Entry<Integer, pair> entry :
                 storeNodes.entrySet()) {
             System.out.print(entry.getValue().first + " ");
-            sum=sum+entry.getValue().first;
+            sum = sum + entry.getValue().first;
 
         }
         System.out.println("Sum: " + sum);

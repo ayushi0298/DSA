@@ -1,10 +1,7 @@
 package CollectionFramework_InterviewBit.Graphs;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.SynchronousQueue;
+
 
 public class ShortestPathToReachDestiation {
     final int inf = (int) (1e9 + 1);
@@ -19,7 +16,6 @@ public class ShortestPathToReachDestiation {
                 dist[1][1] = 1;
             }
         }
-       // int source = input[0][0];
         Queue<int[]> storeRooms = new LinkedList<>();
         storeRooms.add(new int[]{0,0});
         while (!storeRooms.isEmpty()) {

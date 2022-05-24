@@ -20,8 +20,8 @@ public class SearchInsertPosition {
 
     public static void main(String args[]) {
         SearchInsertPosition si = new SearchInsertPosition();
-        int[] array = new int[]{1, 3, 5, 6};
-        int target = 2;
+        int[] array = new int[]{1, 3, 5, 6, 11, 45};
+        int target = 4;
         System.out.println(si.searchInsert(array, target));
 
     }

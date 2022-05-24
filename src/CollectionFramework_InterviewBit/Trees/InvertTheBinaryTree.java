@@ -39,7 +39,7 @@ public class InvertTheBinaryTree {
     public static void main(String args[]){
         InvertTheBinaryTree it= new InvertTheBinaryTree();
         root= it.createTree();
-        it.invertTree(root);
+        System.out.println(it.invertTree(root));
     }
 
 }

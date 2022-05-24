@@ -1,9 +1,10 @@
+/*
 //TC: N*M
 //SC: N*M
 public class SolitareGameKarat {
     int counts = 0;
     final int dx[] = {0, 0, -1, 1};
-    final int dy[] = {-1, 1, 0, 0};
+    final int dy[] = {-1, 1, 0, 0};  
 
     public int dfs(int[][] grid, int row, int column, int[][] visited) {
         for (int i = 0; i < 4; i++) {
@@ -58,9 +59,10 @@ public class SolitareGameKarat {
         int[][] grid5 = {{0},
         };
 
-        System.out.println(sg.countDisappears(grid2, 1, 0));
+        System.out.println(sg.countDisappears(grid2, 1, 3));
         //  System.out.println(sg.countDisappears(grid3, 0, 0));
     }
 
 
 }
+*/
