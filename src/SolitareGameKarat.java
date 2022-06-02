@@ -1,10 +1,9 @@
-/*
 //TC: N*M
 //SC: N*M
 public class SolitareGameKarat {
     int counts = 0;
     final int dx[] = {0, 0, -1, 1};
-    final int dy[] = {-1, 1, 0, 0};  
+    final int dy[] = {-1, 1, 0, 0};
 
     public int dfs(int[][] grid, int row, int column, int[][] visited) {
         for (int i = 0; i < 4; i++) {
@@ -37,32 +36,40 @@ public class SolitareGameKarat {
 
     public static void main(String args[]) {
         SolitareGameKarat sg = new SolitareGameKarat();
-        int[][] grid1 = {{0, 3, 3, 3, 3, 3, 3},
+        int[][] grid2 = {{0, 3, 3, 3, 3, 3, 3},
                 {0, 1, 1, 1, 1, 1, 3},
                 {0, 2, 2, 0, 2, 1, 4},
                 {0, 1, 2, 2, 2, 1, 3},
                 {0, 1, 1, 1, 1, 1, 3},
                 {0, 0, 0, 0, 0, 0, 0}
         };
-        int[][] grid2 = {{4, 4, 4, 4},
+        int[][] grid1 = {{4, 4, 4, 4},
                 {5, 5, 5, 4},
                 {2, 5, 7, 5},
         };
-        int[][] grid3 = {{1, 1},
-                {0, 1}
-        };
+
         int[][] grid4 = {{1, 1, 1},
                 {1, 1, 1},
                 {1, 1, 1},
 
         };
-        int[][] grid5 = {{0},
+        int[][] grid3 = {{0},
         };
 
-        System.out.println(sg.countDisappears(grid2, 1, 3));
+        System.out.println(sg.countDisappears(grid1, 0, 0));
+        // System.out.println(sg.countDisappears(grid1, 1, 1));
+        //System.out.println(sg.countDisappears(grid1, 1, 0));
+        // System.out.println(sg.countDisappears(grid2, 0, 0));
+        //System.out.println(sg.countDisappears(grid2, 3, 0));
+        //System.out.println(sg.countDisappears(grid2, 1, 1));
+        //System.out.println(sg.countDisappears(grid2, 2, 2));
+        // System.out.println(sg.countDisappears(grid2, 0, 3));
+        // System.out.println(sg.countDisappears(grid3, 0, 0));
+        // System.out.println(sg.countDisappears(grid4, 0, 0));
+
+
         //  System.out.println(sg.countDisappears(grid3, 0, 0));
     }
 
 
 }
-*/

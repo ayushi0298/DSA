@@ -34,8 +34,6 @@ public class BottomViewOfBinaryTree {
         TreeNode c = new TreeNode(3);
         TreeNode d = new TreeNode(5);
         TreeNode e = new TreeNode(6);
-        /*TreeNode f = new TreeNode(4);
-        TreeNode g = new TreeNode(25);*/
         TreeNode h = new TreeNode(7);
         TreeNode i = new TreeNode(8);
         root = a;
@@ -74,7 +72,6 @@ public class BottomViewOfBinaryTree {
         }
         System.out.println("Sum: " + sum);
     }
-
 
     public static void main(String args[]) {
         BottomViewOfBinaryTree tb = new BottomViewOfBinaryTree();

@@ -1,5 +1,4 @@
 package FinalTouch;
-
 //https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
 public class DiameterOfABinaryTree {
     static TreeNode root;
@@ -14,7 +13,6 @@ public class DiameterOfABinaryTree {
             this.val = val;
         }
     }
-
     public TreeNode createTree() {
 
         TreeNode a = new TreeNode(1);

@@ -17,12 +17,14 @@ public class FirstRepeatingElement {
             }
             firstRepeating.add(input.get(i));
         }
+        System.out.println(firstRepeating);
 
         //System.out.println(firstoccurrence);
         if (firstOccurrence != -1) {
             return input.get(firstOccurrence);
         }
         return -1;
+
     }
 
     public static void main(String args[]) {

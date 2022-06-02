@@ -57,6 +57,11 @@ public class InterviewMockKarat {
     public static void main(String args[]) {
         InterviewMockKarat it = new InterviewMockKarat();
         String tile = "111333555";
-        System.out.println(it.completeHand(tile));
+        String[] input = new String[]{"11133555", "111333555", "00000111", "13233121", "11223344555", "99999999", "999999999", "9", "99", "000022", "888889", "889", "88888844", "77777777777777", "1111111", "1111122222"};
+        for (int i = 0; i < input.length; i++) {
+            boolean result = it.completeHand(input[i]);
+            System.out.println(result);
+
+        }
     }
 }

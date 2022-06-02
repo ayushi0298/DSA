@@ -68,7 +68,10 @@ public class ShortestPathToTheDestination {
                 {0, 0},
                 {0, 2},
         };
-        System.out.println(sg.shortestPath(grid2));
+        int[][] grid3 = {{0, 1},
+                {0, 2},
+        };
+        System.out.println(sg.shortestPath(grid3));
     }
 }
 

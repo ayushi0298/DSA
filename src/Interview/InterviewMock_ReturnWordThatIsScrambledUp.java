@@ -9,14 +9,14 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
     //space: O(s) for every word in array we need 26 size hashmap
     //time: O(w * s) for every word in array we need
     public String find_embedded_word(String[] myArray, String s1) {
+        //ArrayList<String> output = new ArrayList<>();
         String stringFound;
         HashMap<Character, Integer> storesCharacters = new HashMap<>();
         for (char i = 0; i < s1.length(); i++) {
             if (!storesCharacters.containsKey(s1.charAt(i))) {
                 storesCharacters.put(s1.charAt(i), 1);
-            } else {
-                storesCharacters.put(s1.charAt(i), storesCharacters.get(s1.charAt(i)) + 1);
             }
+            storesCharacters.put(s1.charAt(i), storesCharacters.get(s1.charAt(i)) + 1);
         }
         for (int i = 0; i < myArray.length; i++) {
             boolean found = true;
@@ -36,10 +36,18 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
                 }
 
             }
+            /*if (found == true) {
+                output.add(stringFound);
+            }*/
             if (found == true) {
                 return stringFound;
             }
         }
+        /*if (output.size() != 0) {
+            return output;
+        } else {
+            return null;
+        }*/
         return null;
     }
 
@@ -90,37 +98,37 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         return null;
     }
 
-        public static void main(String args[]) {
-            InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
-            char[][] grid1 = {
-                    {'c', 'c', 'x', 't', 'i', 'b'},
-                    {'c', 'c', 'a', 't', 'n', 'i'},
-                    {'a', 'c', 'n', 'n', 't', 't'},
-                    {'t', 'c', 's', 'i', 'p', 't'},
-                    {'a', 'o', 'o', 'o', 'a', 'a'},
-                    {'o', 'a', 'a', 'a', 'o', 'o'},
-                    {'k', 'a', 'i', 'c', 'k', 'i'}
-            };
-            char[][] grid2 = {{'a'}};
-            String[] word9 = new String[]{"a"};
+    public static void main(String args[]) {
+        InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
+        char[][] grid1 = {
+                {'c', 'c', 'x', 't', 'i', 'b'},
+                {'c', 'c', 'a', 't', 'n', 'i'},
+                {'a', 'c', 'n', 'n', 't', 't'},
+                {'t', 'c', 's', 'i', 'p', 't'},
+                {'a', 'o', 'o', 'o', 'a', 'a'},
+                {'o', 'a', 'a', 'a', 'o', 'o'},
+                {'k', 'a', 'i', 'c', 'k', 'i'}
+        };
+        char[][] grid2 = {{'a'}};
+        String[] word9 = new String[]{"a"};
 
-            String[] inputs = new String[]{"catnip", "cccc", "s", "bit", "aoi", "ki", "aaa", "ooo"};
-            //String[] inputs = new String[]{"ti"};
+        String[] inputs = new String[]{"catnip", "cccc", "s", "bit", "aoi", "ki", "aaa", "ooo"};
+        //String[] inputs = new String[]{"ti"};
 
-            //  System.out.println(Arrays.toString(it.find _embedded_word_in2Darray(grid2,word9)));
-            for (String input : inputs) {
-            System.out.println(input);
-            ArrayList<int[]> result = it.find_embedded_word_in2Darray(grid1, input);
-            Collections.reverse(result);
-            for (int[] i : result) {
-                System.out.println(Arrays.toString(i));
-            }
+        //  System.out.println(Arrays.toString(it.find _embedded_word_in2Darray(grid2,word9)));
+        for (String input : inputs) {
+        System.out.println(input);
+        ArrayList<int[]> result = it.find_embedded_word_in2Darray(grid1, input);
+        Collections.reverse(result);
+        for (int[] i : result) {
+            System.out.println(Arrays.toString(i));
         }
     }
-   /* public static void main(String args[]) {
+}
+    /*public static void main(String args[]) {
         InterviewMock_ReturnWordThatIsScrambledUp it = new InterviewMock_ReturnWordThatIsScrambledUp();
-        String[] myArray = new String[]{"baby", "dog", "bird", "car", "ax"};
-        String s1 = "babyusye";
+        String[] myArray = new String[]{"baby", "dog", "bird", "sye", "ax"};
+        String s1 = "babyusyedog";
         System.out.println(it.find_embedded_word(myArray, s1));
     }*/
 }

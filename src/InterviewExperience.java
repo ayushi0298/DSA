@@ -60,12 +60,13 @@ Predicate<Integer> p = i -> (i < 11);
  * Questions related to core java: Polymorphism, Comparable and Comparator, Immuatablity and why strings are immuatable, JAVA 8 features, STATIC method can be overloaded or overrided.
  * Coding question: remove duplicates from a string without using Collection framework.
  * */
-
-
-
-
-
-
+/*
+Can we override a static method?
+  No, we cannot override static methods because method overriding is based on dynamic binding at runtime and the static methods are bonded using static binding at compile time. So, we cannot override static methods.
+  The calling of method depends upon the type of object that calls the static method. It means:
+  If we call a static method by using the parent class object, the original static method will be called from the parent class.
+  If we call a static method by using the child class object, the static method of the child class will be called.
+*/
 
 
 
