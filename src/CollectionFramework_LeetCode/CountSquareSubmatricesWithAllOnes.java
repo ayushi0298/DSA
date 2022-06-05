@@ -30,7 +30,6 @@ public class CountSquareSubmatricesWithAllOnes {
         int[][] input = {
                 {0, 1, 1, 1},
                 {1, 1, 1, 1},
-                {0, 1, 1, 1}
         };
         System.out.println(cq.countSquares(input));
 
