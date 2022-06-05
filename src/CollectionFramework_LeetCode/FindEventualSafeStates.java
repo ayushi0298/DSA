@@ -3,7 +3,6 @@ package CollectionFramework_LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-
 //https://leetcode.com/problems/find-eventual-safe-states/
 public class FindEventualSafeStates {
     public List<Integer> eventualSafeNodes(int[][] graph) {
