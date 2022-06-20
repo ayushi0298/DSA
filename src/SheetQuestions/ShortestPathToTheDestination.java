@@ -46,7 +46,7 @@ public class ShortestPathToTheDestination {
                         return counts;
                     }
                     if (isValid(x, y, m, n) && visited[x][y] == false) {
-                        System.out.println("K + " + "x : " + x + "y : " + y);
+                        //System.out.println("K + " + "x : " + x + "y : " + y);
                         storesCoordinates.add(new int[]{x, y});
                         visited[x][y] = true;
                     }
@@ -71,7 +71,7 @@ public class ShortestPathToTheDestination {
         int[][] grid3 = {{0, 1},
                 {0, 2},
         };
-        System.out.println(sg.shortestPath(grid3));
+        System.out.println(sg.shortestPath(grid2));
     }
 }
 

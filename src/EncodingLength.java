@@ -8,6 +8,7 @@ public class EncodingLength {
             else {
                 encodedString = encodedString.concat(Integer.toString(count))
                         .concat(Character.toString(text.charAt(i)));
+
                 count = 1;
             }
         }

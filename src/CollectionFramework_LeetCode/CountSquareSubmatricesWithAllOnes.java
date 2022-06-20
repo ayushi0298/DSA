@@ -28,8 +28,8 @@ public class CountSquareSubmatricesWithAllOnes {
     public static void main(String args[]) {
         CountSquareSubmatricesWithAllOnes cq = new CountSquareSubmatricesWithAllOnes();
         int[][] input = {
-                {0, 1, 1, 1},
-                {1, 1, 1, 1},
+                { 1, 1, 1},
+                { 0, 0, 1},
         };
         System.out.println(cq.countSquares(input));
 
