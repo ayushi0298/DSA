@@ -53,10 +53,11 @@ public class DuplicateSubtrees {
 
     private String helper(TreeNode root) {
         if (root == null) {
-            return "#";
+            return " ";
         }
 
-        String path = root.val + "|" + helper(root.left) + "|" + helper(root.right);
+        String path = root.val + " " + helper(root.left) + " " + helper(root.right);
+        System.out.println(path);
         map.put(path, map.containsKey(path) ? root : null);
 
         return path;

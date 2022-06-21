@@ -50,7 +50,7 @@ public class SolitareGameKarat {
 
         int[][] grid4 = {{1, 1, 1},
                 {1, 1, 1},
-                {1, 1, 1},
+                {1, 1, 1}, 
 
         };
         int[][] grid3 = {{0},
