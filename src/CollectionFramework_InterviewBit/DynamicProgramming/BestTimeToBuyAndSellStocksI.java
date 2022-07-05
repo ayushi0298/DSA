@@ -4,7 +4,7 @@ package CollectionFramework_InterviewBit.DynamicProgramming;
 public class BestTimeToBuyAndSellStocksI {
     public int maxProfit(final int[] A) {
         if(A.length==0){
-            return 0;
+            return 0; 
         }
         int buy = A[0], maxPrice = 0;
         for (int i = 1; i <A.length; i++) {
@@ -19,7 +19,7 @@ public class BestTimeToBuyAndSellStocksI {
 
     public static void main(String args[]) {
         BestTimeToBuyAndSellStocksI bt = new BestTimeToBuyAndSellStocksI();
-        int[] input = new int[]{};
+        int[] input = new int[]{1,2};
         System.out.println(bt.maxProfit(input));
 
     }
