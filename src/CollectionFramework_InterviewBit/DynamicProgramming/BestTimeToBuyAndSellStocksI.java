@@ -6,7 +6,7 @@ public class BestTimeToBuyAndSellStocksI {
         if(A.length==0){
             return 0; 
         }
-        int buy = A[0], maxPrice = 0;
+        int buy = A[0], maxPrice = 0; 
         for (int i = 1; i <A.length; i++) {
             if (buy > A[i]) {
                 buy = A[i];

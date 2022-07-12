@@ -1,8 +1,9 @@
 package CollectionFramework_LeetCode;
 //https://leetcode.com/problems/count-square-submatrices-with-all-ones/
+
 public class CountSquareSubmatricesWithAllOnes {
 
-    public int countSquares(int[][] matrix) {
+    public int  countSquares(int[][] matrix) {
         int row = matrix.length;
         int column = matrix[0].length;
         int count = 0;
