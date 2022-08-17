@@ -7,9 +7,9 @@ public class PriorityQueueTemplate {
 
     public void pqq(ArrayList<Integer> input) {
         //default integer priority queue
-        PriorityQueue<Integer> queue = new PriorityQueue<>();
+       // PriorityQueue<Integer> queue = new PriorityQueue<>();
         //reverse integer priority queue
-        //PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
         for (int i = 0; i < input.size(); i++) {
             queue.add(input.get(i));
         }
@@ -44,8 +44,6 @@ public class PriorityQueueTemplate {
 
     public static void main(String args[]) {
         PriorityQueueTemplate x = new PriorityQueueTemplate();
-        pq.add(new Pair(1, 2));
-        pq.add(new Pair(2, 1));
         System.out.println(pq.peek());
         ArrayList<Integer> a = new ArrayList<>();
         a.add(10);

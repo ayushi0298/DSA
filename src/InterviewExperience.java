@@ -78,6 +78,96 @@ Can we override a static method?
 * */
 
 
+/* DELL Interview Expereince:
+
+Round 1:
+1. Basic java questions like: Method overloading and method overriding, Inheritance---Improvement: Could be more precise
+2. Coding questions: Print k frequent elements in an array-- solved successfully
+3. Aptitude questions: 2
+
+Round 2:
+1. Few java code questions which are pasted below:
+
+What is the output?
+A: public class Demo{
+public static void main(String[] arr){
+ System.out.println(“Main1”);
+ }
+public static void main(String arr){ 
+System.out.println(“Main2”);
+}
+}
+Main1
+Main2
+
+B: What is the output?
+class Test
+{
+ static int i;
+ static
+ {
+ System.out.println(“a”);
+ i = 100;
+ }
+}
+public class StaticBlock
+{
+ static
+ {
+ System.out.println(“b”);
+ }
+ public static void main(String[] args)
+ {
+ System.out.println(“c”);
+ System.out.println(Test.i);
+ }
+}
+
+C:
+What is the output?
+public class Test {
+public void print(Integer i) {
+System.out.println("Integer");
+}
+
+public void print(int i) {
+System.out.println("int");
+}
+
+public void print(long i) {
+System.out.println("long");
+}
+
+public static void main(String args[]) {
+Test test = new Test();
+test.print(10);
+}
+}
+
+D: lass BaseClass{
+int arr[10];
+};
+
+class DerivedBaseClass1: public BaseClass { };
+
+class DerivedBaseClass2: public BaseClass { };
+
+class DerivedClass: public DerivedBaseClass1, public DerivedBaseClass2{};
+
+int main(void)
+{
+cout<<sizeof(DerivedClass);
+return 0;
+}
+20—
+
+3. Questions related to java 8 features: Functional interface, Default and static methods
+4. Second-highest salary: SELECT Salary FROM
+(SELECT Salary FROM Employee ORDER BY salary DESC LIMIT 2) AS Emp ORDER BY salary LIMIT 1;
+
+* */
+
+
 
 
 
