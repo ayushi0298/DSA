@@ -39,22 +39,26 @@ public class ShortestPathToTheDestination {
                 for (int k = 0; k < 4; k++) {
                     int x = current[0] + dx[k];
                     int y = current[1] + dy[k];
-                    if (!isValid(x, y, m, n) || grid[x][y] == 1) {
+                    /*if (!isValid(x, y, m, n) || grid[x][y] == 1) {
                         continue;
                     }
                     if (grid[x][y] == 2) {
                         return counts;
-                    }
-                    if (isValid(x, y, m, n) && visited[x][y] == false) {
+                    }*/
+                    if (isValid(x, y, m, n) && visited[x][y] == false && grid[x][y] == 1) {
                         //System.out.println("K + " + "x : " + x + "y : " + y);
                         storesCoordinates.add(new int[]{x, y});
                         visited[x][y] = true;
+                        counts++;
                     }
                 }
             }
-            counts++;
         }
-        return -1;
+        if (counts >= 1) {
+            return counts;
+        } else {
+            return -1;
+        }
     }
 
     public static void main(String args[]) {
@@ -68,10 +72,17 @@ public class ShortestPathToTheDestination {
                 {0, 0},
                 {0, 2},
         };
-        int[][] grid3 = {{0, 1},
-                {0, 2},
+        int[][] grid3 = {{1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
+                {1, 0, 1, 0, 1, 1, 1, 0, 1, 1 },
+                {1, 1, 1, 0, 1, 1, 0, 1, 0, 1 },
+                {0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+                {1, 1, 1, 0, 1, 1, 1, 0, 1, 0 },
+                {1, 0, 1, 1, 1, 1, 0, 1, 0, 0 },
+                {1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+                {1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
+                {1, 1, 0, 0, 0, 0, 1, 0, 0, 1 }
         };
-        System.out.println(sg.shortestPath(grid2));
+        System.out.println(sg.shortestPath(grid3));
     }
 }
-
+//1,0,1

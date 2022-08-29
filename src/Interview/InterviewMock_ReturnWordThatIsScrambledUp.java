@@ -65,6 +65,7 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
                 if (output.size() != 0) {
                     // System.out.println(" ADDED PAIR");
                     output.add(new int[]{i, j});
+
                     return output;
                 }
             }
@@ -132,3 +133,8 @@ public class InterviewMock_ReturnWordThatIsScrambledUp {
         System.out.println(it.find_embedded_word(myArray, s1));
     }*/
 }
+
+/*
+
+
+ */

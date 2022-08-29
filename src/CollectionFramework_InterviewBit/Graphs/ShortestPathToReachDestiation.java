@@ -2,7 +2,6 @@ package CollectionFramework_InterviewBit.Graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 public class ShortestPathToReachDestiation {
     final int inf = (int) (1e9 + 1);
     final int dx[] = {0, 0, -1, 1};
@@ -35,7 +34,7 @@ public class ShortestPathToReachDestiation {
 
     public static void main(String args[]) {
         ShortestPathToReachDestiation st = new ShortestPathToReachDestiation();
-        int[][] grid1 = {{0, 1}, {0, 0}};
+        int[][] grid1 = {{1, 1}, {1, 1}};
         System.out.println(st.findShortest(grid1));
 
     }
